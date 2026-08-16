@@ -1,1180 +1,1635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Yiyi Deng | Environmental Research</title>
+<title>Yiyi Deng | Environmental Research</title>
 
-  <meta name="description"
-        content="Yiyi Deng — student researcher exploring biodiversity, climate change, and geospatial science.">
+<meta name="description"
+content="Yiyi Deng — student researcher exploring biodiversity, climate change, field ecology and geospatial science.">
 
-  <style>
+<style>
 
-    /* =========================
-       BASIC SETTINGS
-    ========================= */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    background:#f7f7f2;
+    color:#18312b;
+    line-height:1.7;
+}
 
-    body {
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Helvetica,
-        Arial,
-        sans-serif;
+a{
+    color:inherit;
+    text-decoration:none;
+}
 
-      background: #f7f7f2;
-      color: #18312b;
-      line-height: 1.7;
-    }
+.container{
+    width:min(1120px,90%);
+    margin:auto;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+/* NAV */
 
-    .container {
-      width: min(1100px, 90%);
-      margin: auto;
-    }
+nav{
+    position:sticky;
+    top:0;
+    z-index:100;
 
+    height:72px;
 
-    /* =========================
-       NAVIGATION
-    ========================= */
+    background:rgba(247,247,242,.94);
+    backdrop-filter:blur(12px);
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    border-bottom:1px solid #dfe5df;
+}
 
-      height: 72px;
+.nav-inner{
+    height:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 
-      background: rgba(247,247,242,0.92);
-      backdrop-filter: blur(12px);
+.logo{
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.15em;
+}
 
-      border-bottom: 1px solid #dfe5df;
-    }
+.nav-links{
+    display:flex;
+    gap:28px;
+    color:#68746f;
+    font-size:14px;
+}
 
-    .nav-inner {
-      height: 100%;
+.nav-links a:hover{
+    color:#18312b;
+}
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* HERO */
 
-    .logo {
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-    }
+.hero{
+    min-height:720px;
 
-    .nav-links {
-      display: flex;
-      gap: 28px;
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
 
-      color: #65746f;
-      font-size: 14px;
-    }
+    gap:70px;
+    align-items:center;
+}
 
-    .nav-links a {
-      transition: 0.2s;
-    }
+.eyebrow{
+    color:#356b5a;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+}
 
-    .nav-links a:hover {
-      color: #18312b;
-    }
+.hero h1{
+    margin-top:18px;
 
+    font-family:Georgia,serif;
 
-    /* =========================
-       HERO
-    ========================= */
+    font-size:clamp(60px,8vw,110px);
+    line-height:.9;
 
-    .hero {
-      min-height: 720px;
+    font-weight:500;
+    letter-spacing:-.06em;
+}
 
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+.hero-description{
+    margin-top:32px;
+    max-width:620px;
 
-      gap: 70px;
+    font-size:19px;
+    color:#68746f;
+}
 
-      align-items: center;
-    }
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    margin-top:32px;
+    flex-wrap:wrap;
+}
 
-    .eyebrow {
-      color: #356b5a;
+.button{
+    display:inline-block;
 
-      font-size: 12px;
-      font-weight: 800;
+    padding:11px 19px;
 
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
+    border-radius:999px;
 
-    .hero h1 {
-      margin-top: 18px;
+    border:1px solid #18312b;
 
-      font-family: Georgia, serif;
-      font-size: clamp(60px, 8vw, 110px);
+    font-size:14px;
 
-      line-height: 0.9;
+    transition:.25s;
+}
 
-      font-weight: 500;
+.button:hover{
+    transform:translateY(-2px);
+}
 
-      letter-spacing: -0.06em;
-    }
+.button-dark{
+    background:#18312b;
+    color:white;
+}
 
-    .hero-description {
-      margin-top: 32px;
+/* HERO IMAGE PLACEHOLDER */
 
-      max-width: 620px;
+.hero-visual{
+    height:500px;
 
-      font-size: 19px;
+    border-radius:30px;
 
-      color: #68746f;
-    }
+    overflow:hidden;
 
-    .hero-buttons {
-      display: flex;
+    position:relative;
 
-      gap: 12px;
+    background:
+        linear-gradient(135deg,#d5e1d5,#e8e8dc);
+}
 
-      margin-top: 32px;
+.hero-visual::before{
+    content:"";
 
-      flex-wrap: wrap;
-    }
+    position:absolute;
 
-    .button {
-      display: inline-block;
+    width:420px;
+    height:420px;
 
-      padding: 11px 18px;
+    border-radius:50%;
 
-      border-radius: 999px;
+    background:#a9c2ae;
 
-      border: 1px solid #18312b;
+    left:-130px;
+    bottom:-150px;
+}
 
-      font-size: 14px;
+.hero-visual::after{
+    content:"";
 
-      transition: 0.25s;
-    }
+    position:absolute;
 
-    .button:hover {
-      transform: translateY(-2px);
-    }
+    width:280px;
+    height:280px;
 
-    .button-dark {
-      background: #18312b;
-      color: white;
-    }
+    border-radius:50%;
 
+    background:#dfd2b5;
 
-    /* =========================
-       HERO VISUAL
-    ========================= */
+    right:-100px;
+    top:-80px;
+}
 
-    .hero-visual {
-      height: 500px;
+.hero-image-note{
+    position:absolute;
 
-      border-radius: 30px;
+    left:28px;
+    right:28px;
+    bottom:28px;
 
-      position: relative;
+    padding:22px;
 
-      overflow: hidden;
+    background:rgba(255,255,255,.62);
 
-      background:
+    backdrop-filter:blur(10px);
+
+    border-radius:18px;
+
+    font-family:Georgia,serif;
+
+    font-size:20px;
+
+    z-index:2;
+}
+
+/* SECTIONS */
+
+section{
+    padding:110px 0;
+    border-top:1px solid #dfe5df;
+}
+
+.section-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+
+    gap:40px;
+
+    margin-bottom:45px;
+}
+
+.section-title{
+    font-family:Georgia,serif;
+
+    font-size:clamp(42px,5vw,65px);
+
+    line-height:.95;
+
+    font-weight:500;
+}
+
+.section-intro{
+    max-width:450px;
+    color:#68746f;
+}
+
+/* RESEARCH */
+
+.research-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.research-card{
+    background:white;
+
+    border:1px solid #dfe5df;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    transition:.25s;
+
+    cursor:pointer;
+}
+
+.research-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 18px 45px rgba(24,49,43,.08);
+}
+
+.research-number{
+    color:#356b5a;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.13em;
+}
+
+.research-card h3{
+    margin-top:14px;
+
+    font-family:Georgia,serif;
+
+    font-size:26px;
+
+    line-height:1.25;
+
+    font-weight:500;
+}
+
+.research-card p{
+    margin-top:14px;
+
+    color:#68746f;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+
+    margin-top:22px;
+}
+
+.tag{
+    padding:5px 9px;
+
+    border-radius:999px;
+
+    background:#dfeadf;
+
+    color:#315548;
+
+    font-size:11px;
+}
+
+.click-note{
+    margin-top:20px;
+
+    color:#356b5a;
+
+    font-size:13px;
+
+    font-weight:700;
+}
+
+/* FIELD RESEARCH */
+
+.nz-card{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:0;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:white;
+
+    border:1px solid #dfe5df;
+}
+
+.nz-image{
+    min-height:420px;
+
+    background:
         linear-gradient(
-          145deg,
-          #d6e2d6,
-          #eceee6
+            135deg,
+            #b8cdbd,
+            #dce4d6
         );
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:28px;
+
+    font-family:Georgia,serif;
+
+    font-size:26px;
+}
+
+.nz-content{
+    padding:42px;
+}
+
+.nz-content h3{
+    font-family:Georgia,serif;
+
+    font-size:34px;
+
+    line-height:1.2;
+
+    font-weight:500;
+}
+
+.nz-content p{
+    margin-top:20px;
+
+    color:#68746f;
+}
+
+/* METHODS */
+
+.methods-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+}
+
+.method{
+    padding:25px;
+
+    border:1px solid #dfe5df;
+
+    border-radius:18px;
+
+    background:white;
+}
+
+.method h3{
+    font-family:Georgia,serif;
+
+    font-size:22px;
+
+    font-weight:500;
+}
+
+.method p{
+    margin-top:10px;
+
+    color:#68746f;
+
+    font-size:14px;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:.7fr 1.3fr;
+
+    gap:90px;
+}
+
+.big-quote{
+    font-family:Georgia,serif;
+
+    font-size:31px;
+
+    line-height:1.3;
+}
+
+.about-text{
+    color:#68746f;
+
+    font-size:17px;
+}
+
+.about-text p+p{
+    margin-top:20px;
+}
+
+.facts{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+    margin-top:32px;
+}
+
+.fact{
+    padding:18px;
+
+    border:1px solid #dfe5df;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.5);
+}
+
+.fact-title{
+    color:#356b5a;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+}
+
+/* BEYOND RESEARCH */
+
+.beyond-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+}
+
+.beyond-card{
+    padding:30px;
+
+    border-radius:22px;
+
+    background:white;
+
+    border:1px solid #dfe5df;
+
+    min-height:250px;
+}
+
+.beyond-icon{
+    font-size:30px;
+}
+
+.beyond-card h3{
+    margin-top:18px;
+
+    font-family:Georgia,serif;
+
+    font-size:25px;
+
+    font-weight:500;
+}
+
+.beyond-card p{
+    margin-top:12px;
+
+    color:#68746f;
+}
+
+/* EXPEDITION */
+
+.expedition{
+    margin-top:20px;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:#dfe8df;
+}
+
+.expedition h3{
+    font-family:Georgia,serif;
+
+    font-size:34px;
+
+    font-weight:500;
+}
+
+.expedition p{
+    margin-top:14px;
+
+    max-width:700px;
+
+    color:#53635d;
+}
+
+/* JOURNEY */
+
+.timeline{
+    position:relative;
+
+    border-left:1px solid #b9c9bf;
+
+    margin-left:15px;
+}
+
+.timeline-item{
+    position:relative;
+
+    padding:0 0 45px 40px;
+}
+
+.timeline-item::before{
+    content:"";
+
+    position:absolute;
+
+    width:11px;
+    height:11px;
+
+    border-radius:50%;
+
+    background:#356b5a;
+
+    left:-6px;
+    top:8px;
+}
+
+.timeline-year{
+    color:#356b5a;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:.12em;
+}
+
+.timeline-item h3{
+    margin-top:5px;
+
+    font-family:Georgia,serif;
+
+    font-size:26px;
+
+    font-weight:500;
+}
+
+.timeline-item p{
+    margin-top:5px;
+
+    color:#68746f;
+}
+
+/* CV */
+
+.cv-box{
+    padding:35px;
+
+    background:white;
+
+    border:1px solid #dfe5df;
+
+    border-radius:22px;
+}
+
+.cv-box h3{
+    font-family:Georgia,serif;
+
+    font-size:32px;
+
+    font-weight:500;
+}
+
+.cv-box p{
+    margin-top:10px;
+
+    color:#68746f;
+}
+
+/* VIDEO */
+
+.video-section{
+    text-align:center;
+}
+
+.video-box{
+    margin-top:45px;
+
+    max-width:900px;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    aspect-ratio:16/9;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    background:#dfe8df;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.video-placeholder{
+    color:#53635d;
+
+    font-family:Georgia,serif;
+
+    font-size:24px;
+
+    padding:30px;
+}
+
+.video-placeholder span{
+    display:block;
+
+    margin-top:10px;
+
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+
+    font-size:13px;
+
+    color:#68746f;
+}
+
+/* FOOTER */
+
+footer{
+    padding:60px 0 80px;
+
+    color:#68746f;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .nav-links{
+        display:none;
     }
 
-    .hero-visual::before {
-      content: "";
+    .hero{
+        grid-template-columns:1fr;
 
-      position: absolute;
-
-      width: 380px;
-      height: 380px;
-
-      border-radius: 50%;
-
-      background: #a9c2ae;
-
-      left: -110px;
-      bottom: -120px;
+        padding:75px 0;
     }
 
-    .hero-visual::after {
-      content: "";
-
-      position: absolute;
-
-      width: 260px;
-      height: 260px;
-
-      border-radius: 50%;
-
-      background: #e4d4b2;
-
-      right: -80px;
-      top: -60px;
+    .hero-visual{
+        height:360px;
     }
 
-    .hero-quote {
-      position: absolute;
-
-      left: 28px;
-      right: 28px;
-      bottom: 28px;
-
-      padding: 22px;
-
-      border-radius: 18px;
-
-      background: rgba(255,255,255,0.55);
-
-      backdrop-filter: blur(10px);
-
-      border: 1px solid rgba(255,255,255,0.7);
-
-      font-family: Georgia, serif;
-
-      font-size: 20px;
-
-      line-height: 1.4;
-
-      z-index: 2;
+    .section-header{
+        display:block;
     }
 
-
-    /* =========================
-       SECTIONS
-    ========================= */
-
-    section {
-      padding: 110px 0;
-
-      border-top: 1px solid #dfe5df;
+    .section-intro{
+        margin-top:20px;
     }
 
-    .section-header {
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: flex-end;
-
-      gap: 40px;
-
-      margin-bottom: 45px;
+    .research-grid{
+        grid-template-columns:1fr;
     }
 
-    .section-title {
-      font-family: Georgia, serif;
-
-      font-size: clamp(42px, 5vw, 65px);
-
-      line-height: 0.95;
-
-      font-weight: 500;
+    .nz-card{
+        grid-template-columns:1fr;
     }
 
-    .section-intro {
-      max-width: 430px;
-
-      color: #68746f;
+    .nz-image{
+        min-height:280px;
     }
 
-
-    /* =========================
-       RESEARCH CARDS
-    ========================= */
-
-    .research-grid {
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 20px;
+    .methods-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .research-card {
-      background: white;
+    .about-grid{
+        grid-template-columns:1fr;
 
-      border: 1px solid #dfe5df;
-
-      border-radius: 22px;
-
-      padding: 30px;
-
-      transition: 0.25s;
+        gap:45px;
     }
 
-    .research-card:hover {
-      transform: translateY(-5px);
-
-      box-shadow:
-        0 18px 45px rgba(24,49,43,0.08);
+    .beyond-grid{
+        grid-template-columns:1fr;
     }
 
-    .research-number {
-      color: #356b5a;
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-      letter-spacing: 0.13em;
+    .facts{
+        grid-template-columns:1fr;
     }
 
-    .research-card h3 {
-      margin-top: 14px;
-
-      font-family: Georgia, serif;
-
-      font-size: 25px;
-
-      font-weight: 500;
-
-      line-height: 1.25;
+    footer{
+        display:block;
     }
+}
 
-    .research-card p {
-      margin-top: 14px;
-
-      color: #68746f;
-    }
-
-    .tags {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 7px;
-
-      margin-top: 22px;
-    }
-
-    .tag {
-      padding: 5px 9px;
-
-      border-radius: 999px;
-
-      background: #dfeadf;
-
-      color: #315548;
-
-      font-size: 11px;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-grid {
-      display: grid;
-
-      grid-template-columns: 0.7fr 1.3fr;
-
-      gap: 90px;
-    }
-
-    .big-quote {
-      font-family: Georgia, serif;
-
-      font-size: 31px;
-
-      line-height: 1.3;
-    }
-
-    .about-text {
-      color: #68746f;
-
-      font-size: 17px;
-    }
-
-    .about-text p + p {
-      margin-top: 20px;
-    }
-
-    .facts {
-      display: grid;
-
-      grid-template-columns: repeat(2, 1fr);
-
-      gap: 14px;
-
-      margin-top: 32px;
-    }
-
-    .fact {
-      padding: 18px;
-
-      border: 1px solid #dfe5df;
-
-      border-radius: 16px;
-
-      background: rgba(255,255,255,0.45);
-    }
-
-    .fact-title {
-      color: #356b5a;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-      letter-spacing: 0.1em;
-
-      text-transform: uppercase;
-    }
-
-    .fact-content {
-      margin-top: 4px;
-    }
-
-
-    /* =========================
-       FIELDWORK
-    ========================= */
-
-    .fieldwork-grid {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 18px;
-    }
-
-    .fieldwork-card {
-      min-height: 260px;
-
-      border-radius: 22px;
-
-      padding: 25px;
-
-      display: flex;
-
-      align-items: flex-end;
-
-      font-family: Georgia, serif;
-
-      font-size: 25px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #d9e3d4,
-          #b6c9bb
-        );
-    }
-
-    .fieldwork-card:nth-child(2) {
-      background:
-        linear-gradient(
-          135deg,
-          #e3dcc8,
-          #b9cdbd
-        );
-    }
-
-    .fieldwork-card-wide {
-      grid-column: 1 / -1;
-
-      min-height: 200px;
-    }
-
-
-    /* =========================
-       CV
-    ========================= */
-
-    .cv-box {
-      background: white;
-
-      border: 1px solid #dfe5df;
-
-      border-radius: 22px;
-
-      padding: 32px;
-    }
-
-    .cv-box h3 {
-      font-family: Georgia, serif;
-
-      font-size: 30px;
-
-      font-weight: 500;
-    }
-
-    .cv-box p {
-      margin-top: 10px;
-
-      color: #68746f;
-    }
-
-    .cv-button {
-      margin-top: 25px;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      padding: 60px 0 80px;
-
-      color: #68746f;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      gap: 20px;
-
-      font-size: 14px;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 800px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-
-        padding: 75px 0;
-      }
-
-      .hero-visual {
-        height: 360px;
-      }
-
-      .section-header {
-        display: block;
-      }
-
-      .section-intro {
-        margin-top: 20px;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-      }
-
-      .fieldwork-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .fieldwork-card-wide {
-        grid-column: auto;
-      }
-
-      .facts {
-        grid-template-columns: 1fr;
-      }
-
-      footer {
-        display: block;
-      }
-
-    }
-
-  </style>
+</style>
 </head>
 
 
 <body>
 
 
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
+<!-- NAV -->
 
-  <nav>
+<nav>
 
-    <div class="container nav-inner">
+<div class="container nav-inner">
 
-      <a class="logo" href="#">
-        YIYI DENG
-      </a>
+<a class="logo" href="#">
+YIYI DENG
+</a>
 
-      <div class="nav-links">
+<div class="nav-links">
 
-        <a href="#research">
-          Research
-        </a>
+<a href="#research">Research</a>
 
-        <a href="#about">
-          About
-        </a>
+<a href="#field">Fieldwork</a>
 
-        <a href="#fieldwork">
-          Fieldwork
-        </a>
+<a href="#about">About</a>
 
-        <a href="#cv">
-          CV
-        </a>
+<a href="#beyond">Beyond Research</a>
 
-      </div>
+<a href="#story">My Story</a>
 
-    </div>
+</div>
 
-  </nav>
+</div>
 
+</nav>
 
 
-  <main class="container">
 
+<main class="container">
 
-    <!-- =========================
-         HERO
-    ========================= -->
 
-    <section
-      class="hero"
-      style="border-top: none;"
-    >
+<!-- HERO -->
 
-      <div>
+<section class="hero" style="border-top:none;">
 
-        <div class="eyebrow">
-          Environmental Science · Biodiversity · Geospatial Research
-        </div>
+<div>
 
-        <h1>
-          Learning from<br>
-          the living world.
-        </h1>
+<div class="eyebrow">
+Environmental Science · Biodiversity · Geospatial Research
+</div>
 
-        <p class="hero-description">
+<h1>
+Learning from<br>
+the living world.
+</h1>
 
-          I explore how climate and environmental change
-          reshape biodiversity, using geospatial data,
-          ecological modeling, and field-based observation.
+<p class="hero-description">
 
-        </p>
+I am a student researcher interested in biodiversity,
+climate change, and the use of geospatial data to
+understand environmental change.
 
+</p>
 
-        <div class="hero-buttons">
+<div class="hero-buttons">
 
-          <a
-            class="button button-dark"
-            href="#research"
-          >
-            Explore my research ↓
-          </a>
+<a class="button button-dark" href="#research">
+Explore my research ↓
+</a>
 
-          <a
-            class="button"
-            href="#about"
-          >
-            About me
-          </a>
+<a class="button" href="#about">
+About me
+</a>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
 
-      <div class="hero-visual">
+<div class="hero-visual">
 
-        <div class="hero-quote">
+<div class="hero-image-note">
 
-          The best questions often begin
-          with simply paying attention.
+A future home for a photograph,
+research map, or satellite image.
 
-        </div>
+<br>
 
-      </div>
+<span style="font-family:Arial;font-size:12px;color:#68746f;">
+Replace this area with your own image later.
+</span>
 
-    </section>
+</div>
 
+</div>
 
+</section>
 
-    <!-- =========================
-         RESEARCH
-    ========================= -->
 
-    <section id="research">
 
-      <div class="section-header">
+<!-- RESEARCH -->
 
-        <h2 class="section-title">
-          Selected<br>
-          research
-        </h2>
+<section id="research">
 
-        <p class="section-intro">
+<div class="section-header">
 
-          My work sits at the intersection of
-          ecology, climate change, remote sensing,
-          and quantitative environmental science.
+<h2 class="section-title">
+Selected<br>
+research
+</h2>
 
-        </p>
+<p class="section-intro">
 
-      </div>
+Three projects that shaped the way I think about
+biodiversity, climate change, and spatial data.
 
+Click a project to explore the research in more detail.
 
+</p>
 
-      <div class="research-grid">
+</div>
 
 
-        <!-- PROJECT 1 -->
+<div class="research-grid">
 
-        <article class="research-card">
 
-          <div class="research-number">
-            01 · BIODIVERSITY & CLIMATE
-          </div>
+<a href="bird-resilience.html" class="research-card">
 
-          <h3>
-            Climate resilience of flagship
-            bird communities in China
-            and the United States
-          </h3>
+<div class="research-number">
+01 · BIODIVERSITY & CLIMATE
+</div>
 
-          <p>
+<h3>
+Climate resilience of flagship
+bird communities
+</h3>
 
-            Examining community resilience under
-            present and future climate scenarios
-            through spatial ecological modeling.
+<p>
+A China–United States comparison of
+community resilience under present and
+future climate scenarios.
+</p>
 
-          </p>
+<div class="tags">
 
-          <div class="tags">
+<span class="tag">MaxEnt</span>
 
-            <span class="tag">MaxEnt</span>
+<span class="tag">GIS</span>
 
-            <span class="tag">GIS</span>
+<span class="tag">ACR</span>
 
-            <span class="tag">
-              Functional Redundancy
-            </span>
+<span class="tag">XGBoost–SHAP</span>
 
-            <span class="tag">
-              Response Diversity
-            </span>
+</div>
 
-            <span class="tag">
-              XGBoost–SHAP
-            </span>
+<div class="click-note">
+Explore project →
+</div>
 
-          </div>
+</a>
 
-        </article>
 
 
+<a href="wildfire.html" class="research-card">
 
-        <!-- PROJECT 2 -->
+<div class="research-number">
+02 · WILDFIRE & BIODIVERSITY
+</div>
 
-        <article class="research-card">
+<h3>
+Wildfire impacts on biodiversity
+in California
+</h3>
 
-          <div class="research-number">
-            02 · WILDFIRE & BIODIVERSITY
-          </div>
+<p>
+Investigating wildfire severity and
+biodiversity change using high-resolution
+remote sensing and spatial analysis.
+</p>
 
-          <h3>
-            Wildfire impacts on biodiversity
-            in California
-          </h3>
+<div class="tags">
 
-          <p>
+<span class="tag">Sentinel-2</span>
 
-            Using high-resolution satellite imagery
-            and spatial modeling to investigate how
-            wildfire severity relates to biodiversity change.
+<span class="tag">U-Net</span>
 
-          </p>
+<span class="tag">dNBR</span>
 
-          <div class="tags">
+<span class="tag">MGWR</span>
 
-            <span class="tag">Sentinel-2</span>
+</div>
 
-            <span class="tag">U-Net</span>
+<div class="click-note">
+Explore project →
+</div>
 
-            <span class="tag">dNBR</span>
+</a>
 
-            <span class="tag">MGWR</span>
 
-          </div>
 
-        </article>
+<a href="primates.html" class="research-card">
 
+<div class="research-number">
+03 · SPECIES DISTRIBUTION
+</div>
 
+<h3>
+Species distribution and niche
+conservatism of Yunnan primates
+</h3>
 
-        <!-- PROJECT 3 -->
+<p>
+Exploring species–environment relationships
+through ecological niche and species
+distribution modeling.
+</p>
 
-        <article class="research-card">
+<div class="tags">
 
-          <div class="research-number">
-            03 · SPECIES DISTRIBUTION
-          </div>
+<span class="tag">MaxEnt</span>
 
-          <h3>
-            Species distribution and niche
-            conservatism of Yunnan primates
-          </h3>
+<span class="tag">SDM</span>
 
-          <p>
+<span class="tag">Niche Analysis</span>
 
-            Exploring species–environment relationships
-            with species distribution modeling and
-            ecological niche comparison.
+</div>
 
-          </p>
+<div class="click-note">
+Explore project →
+</div>
 
-          <div class="tags">
+</a>
 
-            <span class="tag">MaxEnt</span>
 
-            <span class="tag">SDM</span>
+</div>
 
-            <span class="tag">
-              Niche Analysis
-            </span>
+</section>
 
-            <span class="tag">R</span>
 
-          </div>
 
-        </article>
+<!-- FIELD RESEARCH -->
 
+<section id="field">
 
+<div class="section-header">
 
-        <!-- PROJECT 4 -->
+<h2 class="section-title">
+Field<br>
+research
+</h2>
 
-        <article class="research-card">
+<p class="section-intro">
 
-          <div class="research-number">
-            04 · FUTURE QUESTIONS
-          </div>
+Beyond computational modeling, I am interested
+in learning about biodiversity through direct
+observation and fieldwork.
 
-          <h3>
-            What makes an ecosystem resilient?
-          </h3>
+</p>
 
-          <p>
+</div>
 
-            I am interested in how biodiversity,
-            climate variability, habitat structure,
-            and human disturbance interact — and how
-            quantitative tools can support conservation.
 
-          </p>
+<div class="nz-card">
 
-          <div class="tags">
+<div class="nz-image">
 
-            <span class="tag">
-              Climate Change
-            </span>
+New Zealand<br>
+Species Diversity Survey
 
-            <span class="tag">
-              Conservation
-            </span>
+</div>
 
-            <span class="tag">
-              Ecology
-            </span>
+<div class="nz-content">
 
-            <span class="tag">
-              Data Science
-            </span>
+<div class="eyebrow">
+FIELD RESEARCH · NEW ZEALAND
+</div>
 
-          </div>
+<h3>
+Exploring biodiversity
+in the field
+</h3>
 
-        </article>
+<p>
 
+During my species diversity survey in New Zealand,
+I investigated local species and ecological patterns
+through direct field observation and documentation.
 
-      </div>
+</p>
 
-    </section>
+<p>
 
+This experience gave me a different perspective
+from working with satellite imagery and ecological
+models: instead of seeing biodiversity through data,
+I was able to observe it directly.
 
+</p>
 
-    <!-- =========================
-         ABOUT
-    ========================= -->
+<div class="tags">
 
-    <section id="about">
+<span class="tag">Field Survey</span>
 
-      <div class="about-grid">
+<span class="tag">Species Diversity</span>
 
+<span class="tag">Ecology</span>
 
-        <div>
+<span class="tag">Observation</span>
 
-          <div class="eyebrow">
-            About
-          </div>
+</div>
 
-          <p class="big-quote">
+<br>
 
-            I became interested in environmental
-            science by asking a simple question:
+<a class="button" href="#">
+Field notes coming soon
+</a>
 
-            <br><br>
+</div>
 
-            How can we understand change in nature
-            at a scale too large to observe directly?
+</div>
 
-          </p>
+</section>
 
-        </div>
 
 
-        <div class="about-text">
+<!-- HOW I WORK -->
 
-          <p>
+<section>
 
-            My interests grew from observing landscapes
-            and wildlife into working with maps,
-            satellite imagery, and ecological models.
+<div class="section-header">
 
-            I enjoy combining field observation
-            with quantitative analysis.
+<h2 class="section-title">
+How I<br>
+work
+</h2>
 
-          </p>
+<p class="section-intro">
 
+I combine ecological questions with spatial data,
+remote sensing, field observation, and quantitative
+methods.
 
-          <p>
+</p>
 
-            Today, I am especially interested in
-            biodiversity conservation under climate
-            change and in using geospatial methods
-            to connect environmental data with
-            ecological questions.
+</div>
 
-          </p>
 
+<div class="methods-grid">
 
-          <div class="facts">
+<div class="method">
 
+<h3>
+Ecology
+</h3>
 
-            <div class="fact">
+<p>
+Biodiversity · Species distribution ·
+Community resilience · Conservation
+</p>
 
-              <div class="fact-title">
-                Focus
-              </div>
+</div>
 
-              <div class="fact-content">
-                Ecology · Climate · Conservation
-              </div>
 
-            </div>
+<div class="method">
 
+<h3>
+Remote Sensing
+</h3>
 
-            <div class="fact">
+<p>
+Sentinel-2 · MODIS · dNBR · NDVI ·
+Satellite imagery
+</p>
 
-              <div class="fact-title">
-                Tools
-              </div>
+</div>
 
-              <div class="fact-content">
-                GIS · Remote Sensing · R · Python
-              </div>
 
-            </div>
+<div class="method">
 
+<h3>
+Spatial Analysis
+</h3>
 
-            <div class="fact">
+<p>
+ArcGIS · QGIS · Google Earth Engine ·
+MGWR
+</p>
 
-              <div class="fact-title">
-                Methods
-              </div>
+</div>
 
-              <div class="fact-content">
-                MaxEnt · U-Net · MGWR · XGBoost
-              </div>
 
-            </div>
+<div class="method">
 
+<h3>
+Data Science
+</h3>
 
-            <div class="fact">
+<p>
+R · Python · MaxEnt · XGBoost · SHAP · U-Net
+</p>
 
-              <div class="fact-title">
-                Currently
-              </div>
+</div>
 
-              <div class="fact-content">
-                High school researcher
-              </div>
+</div>
 
-            </div>
+</section>
 
 
-          </div>
 
-        </div>
+<!-- ABOUT -->
 
-      </div>
+<section id="about">
 
-    </section>
+<div class="about-grid">
 
+<div>
 
+<div class="eyebrow">
+About me
+</div>
 
-    <!-- =========================
-         FIELDWORK
-    ========================= -->
+<p class="big-quote">
 
-    <section id="fieldwork">
+I became interested in environmental science
+by asking a simple question:
 
-      <div class="section-header">
+<br><br>
 
-        <h2 class="section-title">
-          Beyond<br>
-          the screen
-        </h2>
+How can we understand change in nature
+at a scale too large to observe directly?
 
-        <p class="section-intro">
+</p>
 
-          Research is only one way I learn about
-          the environment. I also learn by being outside.
+</div>
 
-        </p>
 
-      </div>
+<div class="about-text">
 
+<p>
 
-      <div class="fieldwork-grid">
+My interest in environmental science began
+with observing landscapes and wildlife.
+Over time, that curiosity led me to maps,
+satellite imagery, and ecological modeling.
 
+</p>
 
-        <div class="fieldwork-card">
+<p>
 
-          Hiking & mountain landscapes
+Today, I am especially interested in biodiversity
+conservation under climate change and in using
+geospatial methods to connect environmental
+data with ecological questions.
 
-        </div>
+</p>
 
+<div class="facts">
 
-        <div class="fieldwork-card">
+<div class="fact">
 
-          Field observation & nature
+<div class="fact-title">
+Focus
+</div>
 
-        </div>
+Biodiversity · Climate · Conservation
 
+</div>
 
-        <div
-          class="fieldwork-card fieldwork-card-wide"
-        >
 
-          Maps become more meaningful
-          when you have walked through the landscape.
+<div class="fact">
 
-        </div>
+<div class="fact-title">
+Tools
+</div>
 
+GIS · Remote Sensing · R · Python
 
-      </div>
+</div>
 
-    </section>
 
+<div class="fact">
 
+<div class="fact-title">
+Methods
+</div>
 
-    <!-- =========================
-         CV
-    ========================= -->
+MaxEnt · U-Net · MGWR · XGBoost
 
-    <section id="cv">
+</div>
 
-      <div class="section-header">
 
-        <h2 class="section-title">
-          Curriculum<br>
-          vitae
-        </h2>
+<div class="fact">
 
-        <p class="section-intro">
+<div class="fact-title">
+Currently
+</div>
 
-          A concise overview of research,
-          activities, and academic interests.
+Student researcher
 
-        </p>
+</div>
 
-      </div>
+</div>
 
+</div>
 
-      <div class="cv-box">
+</div>
 
-        <h3>
-          Yiyi Deng
-        </h3>
+</section>
 
-        <p>
 
-          Student researcher interested in
-          environmental science, biodiversity,
-          climate change, and geospatial analysis.
 
-        </p>
+<!-- BEYOND RESEARCH -->
 
+<section id="beyond">
 
-        <!--
-          IMPORTANT:
-          Later upload your CV PDF to this repository
-          and name it exactly "CV.pdf".
-        -->
+<div class="section-header">
 
-        <div class="cv-button">
+<h2 class="section-title">
+Beyond<br>
+research
+</h2>
 
-          <a
-            class="button button-dark"
-            href="CV.pdf"
-          >
-            View / Download CV
-          </a>
+<p class="section-intro">
 
-        </div>
+Some of the experiences that shaped me
+outside academic research.
 
-      </div>
+</p>
 
-    </section>
+</div>
 
 
-  </main>
+<div class="beyond-grid">
 
 
+<div class="beyond-card">
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+<div class="beyond-icon">
+🌱
+</div>
 
-  <footer class="container">
+<h3>
+EcoGuard
+</h3>
 
-    <div>
-      © 2026 Yiyi Deng
-    </div>
+<p>
 
-    <div>
-      Environmental Science · Biodiversity · Geospatial Research
-    </div>
+Working with my school community to promote
+more sustainable everyday practices, including
+the transition toward biodegradable cafeteria
+packaging.
 
-  </footer>
+</p>
+
+</div>
+
+
+
+<div class="beyond-card">
+
+<div class="beyond-icon">
+🏅
+</div>
+
+<h3>
+Duke of Edinburgh's Award
+</h3>
+
+<p>
+
+The Silver Award challenged me to develop
+independence, teamwork, perseverance, and
+responsibility beyond the classroom.
+
+</p>
+
+</div>
+
+
+
+<div class="beyond-card">
+
+<div class="beyond-icon">
+🥾
+</div>
+
+<h3>
+Six-day expedition
+</h3>
+
+<p>
+
+A six-day hiking expedition from Huizhou
+to Hong Kong — one of the experiences
+that taught me how to keep moving when
+the trail becomes difficult.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="expedition">
+
+<h3>
+Six days. One trail.
+A lot of uncertainty.
+</h3>
+
+<p>
+
+Before the expedition, I was more worried
+about whether I could finish than excited
+about the journey. Six days of walking,
+fatigue, changing conditions, and teamwork
+eventually taught me that resilience is
+not just an ecological concept — it is
+something people practice too.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- JOURNEY -->
+
+<section>
+
+<div class="section-header">
+
+<h2 class="section-title">
+Research<br>
+journey
+</h2>
+
+<p class="section-intro">
+
+My interests have gradually moved from
+observing nature toward understanding
+environmental change quantitatively.
+
+</p>
+
+</div>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+BEGINNING
+</div>
+
+<h3>
+Curiosity about nature
+</h3>
+
+<p>
+Observing landscapes, wildlife, and
+different ecosystems.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+EARLY RESEARCH
+</div>
+
+<h3>
+Species distribution modeling
+</h3>
+
+<p>
+Learning how environmental variables
+can explain where species occur.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+WILDFIRE
+</div>
+
+<h3>
+California wildfire & biodiversity
+</h3>
+
+<p>
+Connecting remote sensing with
+ecological change.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+CURRENT
+</div>
+
+<h3>
+Bird community resilience
+</h3>
+
+<p>
+Exploring how climate change may
+reshape biodiversity resilience.
+</p>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-year">
+NEXT
+</div>
+
+<h3>
+Climate × Biodiversity × Conservation
+</h3>
+
+<p>
+Continuing to connect field observations,
+spatial data, and conservation questions.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- CV -->
+
+<section>
+
+<div class="section-header">
+
+<h2 class="section-title">
+Curriculum<br>
+vitae
+</h2>
+
+<p class="section-intro">
+
+A concise overview of my academic,
+research, and extracurricular experiences.
+
+</p>
+
+</div>
+
+
+<div class="cv-box">
+
+<h3>
+Yiyi Deng
+</h3>
+
+<p>
+
+Student researcher interested in environmental
+science, biodiversity, climate change, and
+geospatial analysis.
+
+</p>
+
+<br>
+
+<a class="button button-dark" href="CV.pdf">
+View / Download CV
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- VIDEO ESSAY -->
+
+<section id="story" class="video-section">
+
+<div class="eyebrow">
+MY STORY
+</div>
+
+<h2 class="section-title" style="margin-top:15px;">
+Why I care about<br>
+the living world.
+</h2>
+
+<p class="section-intro"
+style="margin:25px auto 0;">
+
+A short video essay about my journey,
+my relationship with nature, and why
+I want to study environmental science.
+
+</p>
+
+
+<div class="video-box">
+
+<div class="video-placeholder">
+
+▶
+
+<span>
+My video essay will appear here soon.
+</span>
+
+</div>
+
+</div>
+
+
+<br><br>
+
+<a class="button" href="#">
+Watch on YouTube →
+</a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="container">
+
+<div>
+© 2026 Yiyi Deng
+</div>
+
+<div>
+Environmental Science · Biodiversity · Geospatial Research
+</div>
+
+</footer>
 
 
 </body>

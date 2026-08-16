@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>California Wildfire & Biodiversity | Yiyi Deng</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+
+background:#f7f7f2;
+
+color:#18312b;
+
+line-height:1.7;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.container{
+width:min(1050px,90%);
+margin:auto;
+}
+
+nav{
+height:72px;
+
+border-bottom:1px solid #dfe5df;
+
+display:flex;
+align-items:center;
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+width:100%;
+}
+
+.logo{
+font-size:14px;
+font-weight:800;
+letter-spacing:.15em;
+}
+
+.back{
+font-size:14px;
+color:#68746f;
+}
+
+.hero{
+padding:110px 0 90px;
+}
+
+.eyebrow{
+color:#356b5a;
+font-size:12px;
+font-weight:800;
+letter-spacing:.16em;
+}
+
+h1{
+margin-top:20px;
+
+font-family:Georgia,serif;
+
+font-size:clamp(48px,7vw,82px);
+
+line-height:1;
+
+font-weight:500;
+
+max-width:900px;
+}
+
+.lead{
+margin-top:30px;
+
+max-width:760px;
+
+font-size:20px;
+
+color:#68746f;
+}
+
+.section{
+padding:85px 0;
+
+border-top:1px solid #dfe5df;
+}
+
+.section-title{
+font-family:Georgia,serif;
+
+font-size:40px;
+
+font-weight:500;
+
+margin-bottom:25px;
+}
+
+.text{
+max-width:780px;
+
+font-size:17px;
+
+color:#596862;
+}
+
+.fire-events{
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:15px;
+
+margin-top:35px;
+}
+
+.event{
+padding:28px;
+
+border-radius:20px;
+
+background:white;
+
+border:1px solid #dfe5df;
+}
+
+.event strong{
+display:block;
+
+font-family:Georgia,serif;
+
+font-size:24px;
+
+font-weight:500;
+}
+
+.event span{
+display:block;
+
+margin-top:5px;
+
+font-size:13px;
+
+color:#68746f;
+}
+
+.flow{
+margin-top:35px;
+
+padding:30px;
+
+border-radius:20px;
+
+background:#fff;
+
+border:1px solid #dfe5df;
+
+text-align:center;
+
+font-family:Georgia,serif;
+
+font-size:21px;
+
+line-height:2;
+}
+
+.image-placeholder{
+margin-top:35px;
+
+min-height:360px;
+
+border-radius:22px;
+
+background:
+linear-gradient(
+135deg,
+#d9dfd7,
+#eadfca
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:30px;
+
+border:1px solid #dfe5df;
+}
+
+.image-placeholder strong{
+display:block;
+
+font-family:Georgia,serif;
+
+font-size:25px;
+
+color:#315548;
+}
+
+.two{
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:18px;
+}
+
+.results{
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:15px;
+
+margin-top:35px;
+}
+
+.result{
+padding:28px;
+
+background:white;
+
+border-radius:20px;
+
+border:1px solid #dfe5df;
+}
+
+.number{
+font-family:Georgia,serif;
+
+font-size:42px;
+
+color:#315548;
+}
+
+.result p{
+margin-top:7px;
+
+font-size:14px;
+
+color:#68746f;
+}
+
+.caption{
+margin-top:9px;
+
+font-size:13px;
+
+color:#68746f;
+}
+
+.reflection{
+padding:35px;
+
+border-radius:22px;
+
+background:#18312b;
+
+color:white;
+
+font-family:Georgia,serif;
+
+font-size:25px;
+
+line-height:1.5;
+}
+
+footer{
+padding:60px 0 80px;
+
+color:#68746f;
+
+font-size:14px;
+}
+
+@media(max-width:800px){
+
+.fire-events{
+grid-template-columns:1fr;
+}
+
+.results{
+grid-template-columns:1fr;
+}
+
+.two{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="container nav-inner">
+
+<a class="logo"
+href="index.html">
+YIYI DENG
+</a>
+
+<a class="back"
+href="index.html">
+← Back to portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+
+<main class="container">
+
+
+<div class="hero">
+
+<div class="eyebrow">
+RESEARCH · 02 · WILDFIRE & BIODIVERSITY
+</div>
+
+<h1>
+Wildfire impacts on biodiversity in California
+</h1>
+
+<p class="lead">
+
+Using high-resolution satellite imagery and
+spatial analysis to investigate how wildfire
+severity relates to biodiversity change.
+
+</p>
+
+</div>
+
+
+
+<section class="section">
+
+<h2 class="section-title">
+The question
+</h2>
+
+<p class="text">
+
+Wildfires can rapidly transform ecosystems,
+but their ecological effects are not spatially
+uniform. This project investigated how differences
+in burn severity were associated with changes
+in biodiversity across three California wildfire
+events.
+
+</p>
+
+</section>
+
+
+
+<section class="section">
+
+<h2 class="section-title">
+Study area
+</h2>
+
+<p class="text">
+
+The study focused on three major wildfire events
+in California:
+
+</p>
+
+
+<div class="fire-events">
+
+<div class="event">
+
+<strong>
+Palisades
+</strong>
+
+<span>
+California wildfire
+</span>
+
+</div>
+
+<div class="event">
+
+<strong>
+Eaton
+</strong>
+
+<span>
+California wildfire
+</span>
+
+</div>
+
+<div class="event">
+
+<strong>
+Hughes
+</strong>
+
+<span>
+California wildfire
+</span>
+
+</div>
+
+</div>
+
+
+<div class="image-placeholder">
+
+<div>
+
+<strong>
+Study area map
+</strong>
+
+Add your Palisades / Eaton / Hughes
+study area map here.
+
+<br><br>
+
+<small>
+Suggested file:
+images/wildfire-study-area.png
+</small>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<h2 class="section-title">
+Remote sensing
+</h2>
+
+<p class="text">
+
+Sentinel-2 imagery was used to delineate burned
+areas at 10-meter spatial resolution. This allowed
+the analysis to capture spatial details that may
+be missed by coarser-resolution datasets.
+
+</p>
+
+
+<div class="flow">
+
+Sentinel-2 imagery
+
+↓
+
+U-Net burn-area delineation
+
+↓
+
+dNBR burn severity
+
+↓
+
+Biodiversity response
+
+↓
+
+Spatial analysis with MGWR
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<h2 class="section-title">
+Burn severity
+</h2>
+
+<p class="text">
+
+Differenced Normalized Burn Ratio (dNBR) was used
+to characterize the severity of ecological disturbance
+following wildfire.
+
+</p>
+
+
+<div class="two">
+
+<div>
+
+<div class="image-placeholder">
+
+<div>
+
+<strong>
+Burned Area
+</strong>
+
+Add your U-Net result here.
+
+<br><br>
+
+<small>
+images/wildfire-unet.png
+</small>
+
+</div>
+
+</div>
+
+<div class="caption">
+U-Net wildfire delineation
+</div>
+
+</div>
+
+
+<div>
+
+<div class="image-placeholder">
+
+<div>
+
+<strong>
+dNBR Map
+</strong>
+
+Add your dNBR map here.
+
+<br><br>
+
+<small>
+images/wildfire-dnbr.png
+</small>
+
+</div>
+
+</div>
+
+<div class="caption">
+Spatial distribution of burn severity
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<h2 class="section-title">
+Biodiversity response
+</h2>
+
+<p class="text">
+
+The analysis examined changes in species richness
+across amphibians, reptiles, and mammals in relation
+to wildfire severity.
+
+</p>
+
+
+<div class="results">
+
+<div class="result">
+
+<div class="number">
+56.1%
+</div>
+
+<p>
+Study area experiencing declining species richness
+</p>
+
+</div>
+
+
+<div class="result">
+
+<div class="number">
+71.0%
+</div>
+
+<p>
+Amphibian area experiencing decline
+</p>
+
+</div>
+
+
+<div class="result">
+
+<div class="number">
+65.2%
+</div>
+
+<p>
+Reptile area experiencing decline
+</p>
+
+</div>
+
+</div>
+
+
+<div class="image-placeholder">
+
+<div>
+
+<strong>
+Biodiversity response graph
+</strong>
+
+Add your species richness /
+tipping-point graph here.
+
+<br><br>
+
+<small>
+images/wildfire-results.png
+</small>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<h2 class="section-title">
+Spatial heterogeneity
+</h2>
+
+<p class="text">
+
+Because ecological responses can vary across space,
+Multiscale Geographically Weighted Regression (MGWR)
+was used to investigate spatially varying relationships
+between wildfire severity and biodiversity response.
+
+</p>
+
+
+<div class="image-placeholder">
+
+<div>
+
+<strong>
+MGWR results
+</strong>
+
+Add your MGWR map / coefficient map here.
+
+<br><br>
+
+<small>
+images/wildfire-mgwr.png
+</small>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<div class="reflection">
+
+This project showed me that a wildfire is not
+simply a burned area on a map.
+
+The ecological consequences depend on where
+the fire occurs, how severe it is, and how
+different species respond.
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<footer class="container">
+
+© 2026 Yiyi Deng · California Wildfire & Biodiversity
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Yiyi Deng | Environmental Research</title>
+
+  <meta name="description"
+        content="Yiyi Deng — student researcher exploring biodiversity, climate change, and geospatial science.">
+
+  <style>
+
+    /* =========================
+       BASIC SETTINGS
+    ========================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      background: #f7f7f2;
+      color: #18312b;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      height: 72px;
+
+      background: rgba(247,247,242,0.92);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid #dfe5df;
+    }
+
+    .nav-inner {
+      height: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+
+      color: #65746f;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #18312b;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 720px;
+
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: #356b5a;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin-top: 18px;
+
+      font-family: Georgia, serif;
+      font-size: clamp(60px, 8vw, 110px);
+
+      line-height: 0.9;
+
+      font-weight: 500;
+
+      letter-spacing: -0.06em;
+    }
+
+    .hero-description {
+      margin-top: 32px;
+
+      max-width: 620px;
+
+      font-size: 19px;
+
+      color: #68746f;
+    }
+
+    .hero-buttons {
+      display: flex;
+
+      gap: 12px;
+
+      margin-top: 32px;
+
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+
+      padding: 11px 18px;
+
+      border-radius: 999px;
+
+      border: 1px solid #18312b;
+
+      font-size: 14px;
+
+      transition: 0.25s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-dark {
+      background: #18312b;
+      color: white;
+    }
+
+
+    /* =========================
+       HERO VISUAL
+    ========================= */
+
+    .hero-visual {
+      height: 500px;
+
+      border-radius: 30px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          #d6e2d6,
+          #eceee6
+        );
+    }
+
+    .hero-visual::before {
+      content: "";
+
+      position: absolute;
+
+      width: 380px;
+      height: 380px;
+
+      border-radius: 50%;
+
+      background: #a9c2ae;
+
+      left: -110px;
+      bottom: -120px;
+    }
+
+    .hero-visual::after {
+      content: "";
+
+      position: absolute;
+
+      width: 260px;
+      height: 260px;
+
+      border-radius: 50%;
+
+      background: #e4d4b2;
+
+      right: -80px;
+      top: -60px;
+    }
+
+    .hero-quote {
+      position: absolute;
+
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+
+      padding: 22px;
+
+      border-radius: 18px;
+
+      background: rgba(255,255,255,0.55);
+
+      backdrop-filter: blur(10px);
+
+      border: 1px solid rgba(255,255,255,0.7);
+
+      font-family: Georgia, serif;
+
+      font-size: 20px;
+
+      line-height: 1.4;
+
+      z-index: 2;
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 110px 0;
+
+      border-top: 1px solid #dfe5df;
+    }
+
+    .section-header {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-end;
+
+      gap: 40px;
+
+      margin-bottom: 45px;
+    }
+
+    .section-title {
+      font-family: Georgia, serif;
+
+      font-size: clamp(42px, 5vw, 65px);
+
+      line-height: 0.95;
+
+      font-weight: 500;
+    }
+
+    .section-intro {
+      max-width: 430px;
+
+      color: #68746f;
+    }
+
+
+    /* =========================
+       RESEARCH CARDS
+    ========================= */
+
+    .research-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .research-card {
+      background: white;
+
+      border: 1px solid #dfe5df;
+
+      border-radius: 22px;
+
+      padding: 30px;
+
+      transition: 0.25s;
+    }
+
+    .research-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 18px 45px rgba(24,49,43,0.08);
+    }
+
+    .research-number {
+      color: #356b5a;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.13em;
+    }
+
+    .research-card h3 {
+      margin-top: 14px;
+
+      font-family: Georgia, serif;
+
+      font-size: 25px;
+
+      font-weight: 500;
+
+      line-height: 1.25;
+    }
+
+    .research-card p {
+      margin-top: 14px;
+
+      color: #68746f;
+    }
+
+    .tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 5px 9px;
+
+      border-radius: 999px;
+
+      background: #dfeadf;
+
+      color: #315548;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 0.7fr 1.3fr;
+
+      gap: 90px;
+    }
+
+    .big-quote {
+      font-family: Georgia, serif;
+
+      font-size: 31px;
+
+      line-height: 1.3;
+    }
+
+    .about-text {
+      color: #68746f;
+
+      font-size: 17px;
+    }
+
+    .about-text p + p {
+      margin-top: 20px;
+    }
+
+    .facts {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 14px;
+
+      margin-top: 32px;
+    }
+
+    .fact {
+      padding: 18px;
+
+      border: 1px solid #dfe5df;
+
+      border-radius: 16px;
+
+      background: rgba(255,255,255,0.45);
+    }
+
+    .fact-title {
+      color: #356b5a;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.1em;
+
+      text-transform: uppercase;
+    }
+
+    .fact-content {
+      margin-top: 4px;
+    }
+
+
+    /* =========================
+       FIELDWORK
+    ========================= */
+
+    .fieldwork-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 18px;
+    }
+
+    .fieldwork-card {
+      min-height: 260px;
+
+      border-radius: 22px;
+
+      padding: 25px;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      font-family: Georgia, serif;
+
+      font-size: 25px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d9e3d4,
+          #b6c9bb
+        );
+    }
+
+    .fieldwork-card:nth-child(2) {
+      background:
+        linear-gradient(
+          135deg,
+          #e3dcc8,
+          #b9cdbd
+        );
+    }
+
+    .fieldwork-card-wide {
+      grid-column: 1 / -1;
+
+      min-height: 200px;
+    }
+
+
+    /* =========================
+       CV
+    ========================= */
+
+    .cv-box {
+      background: white;
+
+      border: 1px solid #dfe5df;
+
+      border-radius: 22px;
+
+      padding: 32px;
+    }
+
+    .cv-box h3 {
+      font-family: Georgia, serif;
+
+      font-size: 30px;
+
+      font-weight: 500;
+    }
+
+    .cv-box p {
+      margin-top: 10px;
+
+      color: #68746f;
+    }
+
+    .cv-button {
+      margin-top: 25px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 60px 0 80px;
+
+      color: #68746f;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        padding: 75px 0;
+      }
+
+      .hero-visual {
+        height: 360px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-intro {
+        margin-top: 20px;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+      }
+
+      .fieldwork-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fieldwork-card-wide {
+        grid-column: auto;
+      }
+
+      .facts {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        display: block;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <div class="container nav-inner">
+
+      <a class="logo" href="#">
+        YIYI DENG
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#research">
+          Research
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#fieldwork">
+          Fieldwork
+        </a>
+
+        <a href="#cv">
+          CV
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+
+  <main class="container">
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section
+      class="hero"
+      style="border-top: none;"
+    >
+
+      <div>
+
+        <div class="eyebrow">
+          Environmental Science · Biodiversity · Geospatial Research
+        </div>
+
+        <h1>
+          Learning from<br>
+          the living world.
+        </h1>
+
+        <p class="hero-description">
+
+          I explore how climate and environmental change
+          reshape biodiversity, using geospatial data,
+          ecological modeling, and field-based observation.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            class="button button-dark"
+            href="#research"
+          >
+            Explore my research ↓
+          </a>
+
+          <a
+            class="button"
+            href="#about"
+          >
+            About me
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="hero-quote">
+
+          The best questions often begin
+          with simply paying attention.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         RESEARCH
+    ========================= -->
+
+    <section id="research">
+
+      <div class="section-header">
+
+        <h2 class="section-title">
+          Selected<br>
+          research
+        </h2>
+
+        <p class="section-intro">
+
+          My work sits at the intersection of
+          ecology, climate change, remote sensing,
+          and quantitative environmental science.
+
+        </p>
+
+      </div>
+
+
+
+      <div class="research-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="research-card">
+
+          <div class="research-number">
+            01 · BIODIVERSITY & CLIMATE
+          </div>
+
+          <h3>
+            Climate resilience of flagship
+            bird communities in China
+            and the United States
+          </h3>
+
+          <p>
+
+            Examining community resilience under
+            present and future climate scenarios
+            through spatial ecological modeling.
+
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">MaxEnt</span>
+
+            <span class="tag">GIS</span>
+
+            <span class="tag">
+              Functional Redundancy
+            </span>
+
+            <span class="tag">
+              Response Diversity
+            </span>
+
+            <span class="tag">
+              XGBoost–SHAP
+            </span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="research-card">
+
+          <div class="research-number">
+            02 · WILDFIRE & BIODIVERSITY
+          </div>
+
+          <h3>
+            Wildfire impacts on biodiversity
+            in California
+          </h3>
+
+          <p>
+
+            Using high-resolution satellite imagery
+            and spatial modeling to investigate how
+            wildfire severity relates to biodiversity change.
+
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">Sentinel-2</span>
+
+            <span class="tag">U-Net</span>
+
+            <span class="tag">dNBR</span>
+
+            <span class="tag">MGWR</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="research-card">
+
+          <div class="research-number">
+            03 · SPECIES DISTRIBUTION
+          </div>
+
+          <h3>
+            Species distribution and niche
+            conservatism of Yunnan primates
+          </h3>
+
+          <p>
+
+            Exploring species–environment relationships
+            with species distribution modeling and
+            ecological niche comparison.
+
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">MaxEnt</span>
+
+            <span class="tag">SDM</span>
+
+            <span class="tag">
+              Niche Analysis
+            </span>
+
+            <span class="tag">R</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 4 -->
+
+        <article class="research-card">
+
+          <div class="research-number">
+            04 · FUTURE QUESTIONS
+          </div>
+
+          <h3>
+            What makes an ecosystem resilient?
+          </h3>
+
+          <p>
+
+            I am interested in how biodiversity,
+            climate variability, habitat structure,
+            and human disturbance interact — and how
+            quantitative tools can support conservation.
+
+          </p>
+
+          <div class="tags">
+
+            <span class="tag">
+              Climate Change
+            </span>
+
+            <span class="tag">
+              Conservation
+            </span>
+
+            <span class="tag">
+              Ecology
+            </span>
+
+            <span class="tag">
+              Data Science
+            </span>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+      <div class="about-grid">
+
+
+        <div>
+
+          <div class="eyebrow">
+            About
+          </div>
+
+          <p class="big-quote">
+
+            I became interested in environmental
+            science by asking a simple question:
+
+            <br><br>
+
+            How can we understand change in nature
+            at a scale too large to observe directly?
+
+          </p>
+
+        </div>
+
+
+        <div class="about-text">
+
+          <p>
+
+            My interests grew from observing landscapes
+            and wildlife into working with maps,
+            satellite imagery, and ecological models.
+
+            I enjoy combining field observation
+            with quantitative analysis.
+
+          </p>
+
+
+          <p>
+
+            Today, I am especially interested in
+            biodiversity conservation under climate
+            change and in using geospatial methods
+            to connect environmental data with
+            ecological questions.
+
+          </p>
+
+
+          <div class="facts">
+
+
+            <div class="fact">
+
+              <div class="fact-title">
+                Focus
+              </div>
+
+              <div class="fact-content">
+                Ecology · Climate · Conservation
+              </div>
+
+            </div>
+
+
+            <div class="fact">
+
+              <div class="fact-title">
+                Tools
+              </div>
+
+              <div class="fact-content">
+                GIS · Remote Sensing · R · Python
+              </div>
+
+            </div>
+
+
+            <div class="fact">
+
+              <div class="fact-title">
+                Methods
+              </div>
+
+              <div class="fact-content">
+                MaxEnt · U-Net · MGWR · XGBoost
+              </div>
+
+            </div>
+
+
+            <div class="fact">
+
+              <div class="fact-title">
+                Currently
+              </div>
+
+              <div class="fact-content">
+                High school researcher
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FIELDWORK
+    ========================= -->
+
+    <section id="fieldwork">
+
+      <div class="section-header">
+
+        <h2 class="section-title">
+          Beyond<br>
+          the screen
+        </h2>
+
+        <p class="section-intro">
+
+          Research is only one way I learn about
+          the environment. I also learn by being outside.
+
+        </p>
+
+      </div>
+
+
+      <div class="fieldwork-grid">
+
+
+        <div class="fieldwork-card">
+
+          Hiking & mountain landscapes
+
+        </div>
+
+
+        <div class="fieldwork-card">
+
+          Field observation & nature
+
+        </div>
+
+
+        <div
+          class="fieldwork-card fieldwork-card-wide"
+        >
+
+          Maps become more meaningful
+          when you have walked through the landscape.
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CV
+    ========================= -->
+
+    <section id="cv">
+
+      <div class="section-header">
+
+        <h2 class="section-title">
+          Curriculum<br>
+          vitae
+        </h2>
+
+        <p class="section-intro">
+
+          A concise overview of research,
+          activities, and academic interests.
+
+        </p>
+
+      </div>
+
+
+      <div class="cv-box">
+
+        <h3>
+          Yiyi Deng
+        </h3>
+
+        <p>
+
+          Student researcher interested in
+          environmental science, biodiversity,
+          climate change, and geospatial analysis.
+
+        </p>
+
+
+        <!--
+          IMPORTANT:
+          Later upload your CV PDF to this repository
+          and name it exactly "CV.pdf".
+        -->
+
+        <div class="cv-button">
+
+          <a
+            class="button button-dark"
+            href="CV.pdf"
+          >
+            View / Download CV
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer class="container">
+
+    <div>
+      © 2026 Yiyi Deng
+    </div>
+
+    <div>
+      Environmental Science · Biodiversity · Geospatial Research
+    </div>
+
+  </footer>
+
+
+</body>
+</html>

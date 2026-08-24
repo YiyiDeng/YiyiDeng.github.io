@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Bird Community Resilience | Yiyi Deng</title>
+
+<meta name="description"
+content="A China–United States comparison of bird community resilience and future climate refugia under climate change.">
 
 <style>
 
@@ -16,10 +20,17 @@
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:80px;
 }
 
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
     background:#f7f7f2;
     color:#18312b;
     line-height:1.7;
@@ -30,10 +41,18 @@ a{
     text-decoration:none;
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
+
 .container{
     width:min(1050px,90%);
     margin:auto;
 }
+
+
+/* NAV */
 
 nav{
     height:72px;
@@ -42,9 +61,20 @@ nav{
     align-items:center;
 
     border-bottom:1px solid #dfe5df;
+
+    background:rgba(247,247,242,.95);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 .nav-inner{
+    width:100%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -61,6 +91,13 @@ nav{
     font-size:14px;
 }
 
+.back:hover{
+    color:#18312b;
+}
+
+
+/* HERO */
+
 .hero{
     padding:110px 0 90px;
 }
@@ -70,6 +107,7 @@ nav{
     font-size:12px;
     font-weight:800;
     letter-spacing:.16em;
+    text-transform:uppercase;
 }
 
 h1{
@@ -91,12 +129,15 @@ h1{
 .lead{
     margin-top:30px;
 
-    max-width:750px;
+    max-width:780px;
 
     color:#68746f;
 
     font-size:20px;
 }
+
+
+/* SECTIONS */
 
 .section{
     padding:85px 0;
@@ -111,16 +152,21 @@ h1{
 
     font-weight:500;
 
+    line-height:1.1;
+
     margin-bottom:25px;
 }
 
 .text{
-    max-width:760px;
+    max-width:780px;
 
     color:#596862;
 
     font-size:17px;
 }
+
+
+/* QUESTION */
 
 .question{
     padding:35px;
@@ -138,10 +184,14 @@ h1{
     line-height:1.4;
 }
 
+
+/* DATA */
+
 .methods{
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
 
     gap:14px;
 
@@ -180,6 +230,9 @@ h1{
     font-size:19px;
 }
 
+
+/* FLOW */
+
 .flow{
     margin-top:40px;
 
@@ -195,54 +248,82 @@ h1{
 
     font-family:Georgia,serif;
 
-    font-size:22px;
+    font-size:21px;
 
     line-height:2;
 }
 
-.image-placeholder{
-    margin-top:35px;
 
-    min-height:360px;
+/* MAP */
+
+.map-block{
+    margin-top:45px;
+}
+
+.map-title{
+    font-family:Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:500;
+
+    line-height:1.2;
+
+    margin-bottom:12px;
+}
+
+.map-description{
+    max-width:780px;
+
+    color:#68746f;
+
+    font-size:16px;
+
+    margin-bottom:25px;
+}
+
+.map-frame{
+    width:100%;
+
+    background:white;
+
+    border:1px solid #dfe5df;
 
     border-radius:22px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #d8e3d8,
-            #e8e9df
-        );
+    overflow:hidden;
 
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    padding:30px;
-
-    color:#53635d;
-
-    border:1px solid #dfe5df;
+    box-shadow:
+        0 15px 40px rgba(24,49,43,.06);
 }
 
-.image-placeholder strong{
-    display:block;
+.map-frame img{
+    width:100%;
+    height:auto;
 
-    font-family:Georgia,serif;
+    object-fit:contain;
 
-    font-size:25px;
-
-    color:#315548;
+    background:#eef1ea;
 }
+
+.map-caption{
+    padding:18px 22px;
+
+    color:#68746f;
+
+    font-size:13px;
+
+    border-top:1px solid #dfe5df;
+}
+
+
+/* RESULTS */
 
 .results{
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
 
     gap:15px;
 
@@ -275,23 +356,162 @@ h1{
     font-size:14px;
 }
 
-.two-images{
+
+/* FINDINGS */
+
+.findings{
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
 
     gap:18px;
 
-    margin-top:20px;
+    margin-top:35px;
 }
 
-.caption{
+.finding{
+    padding:28px;
+
+    background:white;
+
+    border:1px solid #dfe5df;
+
+    border-radius:20px;
+}
+
+.finding-number{
+    color:#356b5a;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.12em;
+}
+
+.finding h3{
+    margin-top:10px;
+
+    font-family:Georgia,serif;
+
+    font-size:24px;
+
+    font-weight:500;
+}
+
+.finding p{
     margin-top:10px;
 
     color:#68746f;
-
-    font-size:13px;
 }
+
+
+/* REFUGIA */
+
+.refugia-box{
+    margin-top:35px;
+
+    padding:32px;
+
+    background:#dfe8df;
+
+    border-radius:22px;
+}
+
+.refugia-box h3{
+    font-family:Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:500;
+}
+
+.refugia-box p{
+    margin-top:14px;
+
+    max-width:780px;
+
+    color:#53635d;
+}
+
+.refugia-types{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    gap:14px;
+
+    margin-top:25px;
+}
+
+.refugia-type{
+    padding:22px;
+
+    background:rgba(255,255,255,.65);
+
+    border-radius:17px;
+
+    border:1px solid rgba(24,49,43,.08);
+}
+
+.refugia-type strong{
+    display:block;
+
+    color:#315548;
+
+    font-family:Georgia,serif;
+
+    font-size:19px;
+}
+
+.refugia-type p{
+    margin-top:7px;
+
+    font-size:14px;
+
+    color:#596862;
+}
+
+
+/* SHAP */
+
+.shap{
+    margin-top:35px;
+}
+
+
+/* CONSERVATION */
+
+.implication{
+    margin-top:35px;
+
+    padding:35px;
+
+    background:#e2ebe2;
+
+    border-radius:22px;
+}
+
+.implication h3{
+    font-family:Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:500;
+}
+
+.implication p{
+    margin-top:14px;
+
+    max-width:780px;
+
+    color:#53635d;
+}
+
+
+/* REFLECTION */
 
 .reflection{
     padding:35px;
@@ -309,6 +529,9 @@ h1{
     line-height:1.45;
 }
 
+
+/* FOOTER */
+
 footer{
     padding:60px 0 80px;
 
@@ -316,6 +539,9 @@ footer{
 
     font-size:14px;
 }
+
+
+/* MOBILE */
 
 @media(max-width:800px){
 
@@ -327,18 +553,58 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .two-images{
+    .findings{
         grid-template-columns:1fr;
+    }
+
+    .refugia-types{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:70px 0;
+    }
+
+    .section-title{
+        font-size:35px;
+    }
+
+    .question{
+        padding:27px;
+        font-size:22px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .container{
+        width:88%;
+    }
+
+    .methods{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding:80px 0 70px;
+    }
+
+    .lead{
+        font-size:17px;
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
+
+<!-- NAV -->
 
 <nav>
 
@@ -355,7 +621,6 @@ YIYI DENG
 </div>
 
 </nav>
-
 
 
 <main class="container">
@@ -375,17 +640,16 @@ Climate resilience of flagship bird communities
 
 <p class="lead">
 
-A comparative study of how climate change may
-reshape the spatial resilience of flagship bird
-communities in China and the United States.
+A comparative study of bird community resilience
+and future climate refugia across China and the
+United States.
 
 </p>
 
 </div>
 
 
-
-<!-- QUESTION -->
+<!-- RESEARCH QUESTION -->
 
 <section class="section">
 
@@ -396,7 +660,8 @@ Research question
 <div class="question">
 
 How does climate change influence the spatial
-resilience of flagship bird communities in
+resilience of flagship bird communities, and
+where may future climate refugia occur in
 China and the United States?
 
 </div>
@@ -404,8 +669,7 @@ China and the United States?
 </section>
 
 
-
-<!-- BACKGROUND -->
+<!-- WHY -->
 
 <section class="section">
 
@@ -418,17 +682,19 @@ Why this question?
 Climate change is reshaping species distributions
 and ecological communities. However, species
 richness alone does not fully describe whether
-a community can remain resilient when environmental
+a community can remain resilient as environmental
 conditions change.
 
-This project therefore examines community resilience
-by combining species distributions with functional
-redundancy and response diversity.
+This project therefore evaluates bird community
+resilience by integrating species distributions,
+functional redundancy, and response diversity.
+Future climate projections are then compared
+with current resilience patterns to identify
+potential climate refugia.
 
 </p>
 
 </section>
-
 
 
 <!-- DATA -->
@@ -467,9 +733,9 @@ Data
 
 <div class="method">
 
-<strong>Species</strong>
+<strong>Study region</strong>
 
-<span>Flagship birds</span>
+<span>China · United States</span>
 
 </div>
 
@@ -478,8 +744,7 @@ Data
 </section>
 
 
-
-<!-- METHOD -->
+<!-- METHODOLOGY -->
 
 <section class="section">
 
@@ -489,10 +754,16 @@ Methodology
 
 <p class="text">
 
-Species distribution models were first developed
-to estimate the environmental suitability of each
-species. Community resilience was then quantified
+Species distribution models were developed to
+estimate the environmental suitability of each
+flagship bird species under current and future
+climate conditions. These predictions were then
+combined to quantify bird community resilience
 using functional redundancy and response diversity.
+
+An XGBoost–SHAP framework was subsequently used
+to investigate the environmental drivers of
+community resilience.
 
 </p>
 
@@ -507,15 +778,23 @@ MaxEnt species distribution models
 
 ↓
 
+Current & Future Species Suitability
+
+↓
+
 Functional Redundancy + Response Diversity
 
 ↓
 
-Avian Community Resilience
+Current & Future Bird Community Resilience
 
 ↓
 
-XGBoost + SHAP
+Compare ACR change under future climate
+
+↓
+
+Future Climate Refugia Identification
 
 </div>
 
@@ -524,7 +803,7 @@ XGBoost + SHAP
 
 <div class="method">
 
-<strong>Model</strong>
+<strong>Species distribution</strong>
 
 <span>MaxEnt</span>
 
@@ -540,7 +819,7 @@ XGBoost + SHAP
 
 <div class="method">
 
-<strong>Machine Learning</strong>
+<strong>Machine learning</strong>
 
 <span>XGBoost</span>
 
@@ -559,79 +838,56 @@ XGBoost + SHAP
 </section>
 
 
-
-<!-- MAP -->
+<!-- BIRD COMMUNITY RESILIENCE -->
 
 <section class="section">
 
 <h2 class="section-title">
-Spatial results
+Bird community resilience
 </h2>
 
 <p class="text">
 
-The analysis identified substantial differences
-in the spatial distribution of community resilience
-between China and the United States.
+The first major output of the study is a comprehensive
+bird community resilience map covering both China
+and the United States.
+
+The map summarizes the spatial distribution of
+community resilience and provides the basis for
+examining how resilience may change under future
+climate conditions.
 
 </p>
 
 
-<div class="two-images">
+<div class="map-block">
 
-<div>
-
-<div class="image-placeholder">
-
-<div>
-
-<strong>China ACR Map</strong>
-
-Replace this box with your China
-resilience map.
-
-<br><br>
-
-<small>
-Suggested file:
-images/acr-china.png
-</small>
-
+<div class="map-title">
+Bird Community Resilience Map
 </div>
 
-</div>
+<p class="map-description">
 
-<div class="caption">
-Current resilience distribution — China
-</div>
+Bird community resilience was quantified using
+functional redundancy and response diversity,
+integrating the modeled distributions of flagship
+bird species.
 
-</div>
+</p>
 
 
-<div>
+<div class="map-frame">
 
-<div class="image-placeholder">
+<img
+    src="images/bird-community-resilience.png"
+    alt="Bird community resilience map across China and the United States"
+>
 
-<div>
+<div class="map-caption">
 
-<strong>United States ACR Map</strong>
+Bird community resilience across China and the
+United States.
 
-Replace this box with your US
-resilience map.
-
-<br><br>
-
-<small>
-Suggested file:
-images/acr-us.png
-</small>
-
-</div>
-
-</div>
-
-<div class="caption">
-Current resilience distribution — United States
 </div>
 
 </div>
@@ -641,7 +897,6 @@ Current resilience distribution — United States
 </section>
 
 
-
 <!-- RESULTS -->
 
 <section class="section">
@@ -649,6 +904,13 @@ Current resilience distribution — United States
 <h2 class="section-title">
 Key findings
 </h2>
+
+<p class="text">
+
+The resilience assessment revealed strong spatial
+differences between China and the United States.
+
+</p>
 
 
 <div class="results">
@@ -673,7 +935,7 @@ High-resilience area in China
 </div>
 
 <p>
-Resilient area coverage in the United States
+Resilience coverage in the United States
 </p>
 
 </div>
@@ -694,22 +956,47 @@ Non-ACR area in China
 </div>
 
 
-<div class="image-placeholder">
+<div class="findings">
 
-<div>
+<div class="finding">
 
-<strong>
-Climate response & SHAP results
-</strong>
+<div class="finding-number">
+01 · CHINA
+</div>
 
-Add your XGBoost–SHAP graph here.
+<h3>
+Limited high-resilience areas
+</h3>
 
-<br><br>
+<p>
 
-<small>
-Suggested file:
-images/bird-shap.png
-</small>
+China was dominated by non-resilient and
+low-resilience areas, while high-resilience
+areas occupied only a small proportion of
+the study region.
+
+</p>
+
+</div>
+
+
+<div class="finding">
+
+<div class="finding-number">
+02 · UNITED STATES
+</div>
+
+<h3>
+Broader resilience coverage
+</h3>
+
+<p>
+
+The United States showed substantially greater
+spatial coverage of resilient bird communities
+compared with China.
+
+</p>
 
 </div>
 
@@ -718,40 +1005,35 @@ images/bird-shap.png
 </section>
 
 
-
-<!-- FUTURE -->
+<!-- SHAP -->
 
 <section class="section">
 
 <h2 class="section-title">
-Future projections
+What drives resilience?
 </h2>
 
 <p class="text">
 
-The framework can be extended across future climate
-scenarios to identify areas where resilient bird
-communities may persist and potential climate refugia
-may emerge.
+The XGBoost–SHAP framework was used to examine
+which environmental variables were most strongly
+associated with spatial variation in bird community
+resilience.
 
 </p>
 
-<div class="image-placeholder">
 
-<div>
+<div class="map-frame shap">
 
-<strong>
-Future SSP projections
-</strong>
+<img
+    src="images/bird-shap.png"
+    alt="XGBoost SHAP analysis of bird community resilience"
+>
 
-Add your SSP1 / SSP2 / SSP5 maps here.
+<div class="map-caption">
 
-<br><br>
-
-<small>
-Suggested file:
-images/bird-future.png
-</small>
+XGBoost–SHAP analysis of environmental drivers
+of bird community resilience.
 
 </div>
 
@@ -759,6 +1041,183 @@ images/bird-future.png
 
 </section>
 
+
+<!-- FUTURE REFUGIA -->
+
+<section class="section">
+
+<h2 class="section-title">
+Future climate refugia
+</h2>
+
+<p class="text">
+
+The next stage of the analysis compares current
+community resilience with projected future resilience
+under climate change.
+
+Areas were identified as potential climate refugia
+based on how their resilience changes between current
+conditions and future climate scenarios.
+
+</p>
+
+
+<div class="refugia-box">
+
+<h3>
+From resilience to refugia
+</h3>
+
+<p>
+
+Rather than treating future climate refugia as a
+separate analysis, this step builds directly on the
+current and future ACR maps. The change in community
+resilience provides a basis for identifying areas that
+may retain or gain resilience under future climate
+conditions.
+
+</p>
+
+
+<div class="refugia-types">
+
+<div class="refugia-type">
+
+<strong>
+Stable refugia
+</strong>
+
+<p>
+
+Areas with high current resilience that
+remain highly resilient under future
+climate conditions.
+
+</p>
+
+</div>
+
+
+<div class="refugia-type">
+
+<strong>
+Transitional refugia
+</strong>
+
+<p>
+
+Areas that have lower current resilience
+but may develop higher resilience under
+future climate conditions.
+
+</p>
+
+</div>
+
+
+<div class="refugia-type">
+
+<strong>
+Potential refugia
+</strong>
+
+<p>
+
+Areas with high current resilience that
+may experience some decline while still
+remaining relevant for future conservation.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="map-block">
+
+<div class="map-title">
+Future Climate Refugia Identification
+</div>
+
+<p class="map-description">
+
+The resulting map highlights potential areas for
+biodiversity persistence under projected climate
+conditions across China and the United States.
+
+</p>
+
+
+<div class="map-frame">
+
+<img
+    src="images/future-climate-refugia.png"
+    alt="Future climate refugia identification map across China and the United States"
+>
+
+<div class="map-caption">
+
+Future climate refugia identified from changes
+in bird community resilience under future climate
+scenarios.
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONSERVATION -->
+
+<section class="section">
+
+<h2 class="section-title">
+Conservation implications
+</h2>
+
+<p class="text">
+
+Combining community resilience with future climate
+refugia identification provides a spatial framework
+for understanding where bird communities may be
+better able to persist under climate change.
+
+</p>
+
+
+<div class="implication">
+
+<h3>
+From resilience to conservation
+</h3>
+
+<p>
+
+The results suggest that conservation planning
+should not focus only on current species richness.
+Areas with high current resilience, areas likely
+to maintain resilience in the future, and areas
+that may gain resilience under changing climatic
+conditions can represent different conservation
+priorities.
+
+Understanding these spatial differences may help
+inform climate-adaptive biodiversity conservation
+in both China and the United States.
+
+</p>
+
+</div>
+
+</section>
 
 
 <!-- REFLECTION -->
@@ -768,14 +1227,17 @@ images/bird-future.png
 <div class="reflection">
 
 This project changed the way I think about
-biodiversity. A map of species richness can
-tell us where species are, but resilience asks
-a different question:
+biodiversity.
+
+A map of species richness can tell us where
+species are, but resilience asks a different
+question:
 
 <br><br>
 
 <strong>
-What happens when the environment changes?
+What happens when the environment changes —
+and where might biodiversity persist?
 </strong>
 
 </div>

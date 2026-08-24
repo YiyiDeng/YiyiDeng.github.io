@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,6 +12,10 @@ content="Yiyi Deng — student researcher exploring biodiversity, climate change
 
 <style>
 
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -19,13 +24,25 @@ content="Yiyi Deng — student researcher exploring biodiversity, climate change
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:80px;
 }
 
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
     background:#f7f7f2;
     color:#18312b;
+
     line-height:1.7;
+}
+
+img{
+    max-width:100%;
 }
 
 a{
@@ -34,11 +51,14 @@ a{
 }
 
 .container{
-    width:min(1120px,90%);
+    width:min(1120px, 90%);
     margin:auto;
 }
 
-/* NAV */
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 nav{
     position:sticky;
@@ -48,13 +68,16 @@ nav{
     height:72px;
 
     background:rgba(247,247,242,.94);
-    backdrop-filter:blur(12px);
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
 
     border-bottom:1px solid #dfe5df;
 }
 
 .nav-inner{
     height:100%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -69,31 +92,47 @@ nav{
 .nav-links{
     display:flex;
     gap:28px;
+
     color:#68746f;
+
     font-size:14px;
+}
+
+.nav-links a{
+    transition:.2s ease;
 }
 
 .nav-links a:hover{
     color:#18312b;
 }
 
-/* HERO */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero{
     min-height:720px;
 
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+
+    grid-template-columns:
+        minmax(0,1.05fr)
+        minmax(360px,.95fr);
 
     gap:70px;
+
     align-items:center;
 }
 
 .eyebrow{
     color:#356b5a;
+
     font-size:12px;
     font-weight:800;
+
     letter-spacing:.18em;
+
     text-transform:uppercase;
 }
 
@@ -103,24 +142,31 @@ nav{
     font-family:Georgia,serif;
 
     font-size:clamp(60px,8vw,110px);
+
     line-height:.9;
 
     font-weight:500;
+
     letter-spacing:-.06em;
 }
 
 .hero-description{
     margin-top:32px;
+
     max-width:620px;
 
     font-size:19px;
+
     color:#68746f;
 }
 
 .hero-buttons{
     display:flex;
+
     gap:12px;
+
     margin-top:32px;
+
     flex-wrap:wrap;
 }
 
@@ -135,7 +181,10 @@ nav{
 
     font-size:14px;
 
-    transition:.25s;
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease;
 }
 
 .button:hover{
@@ -147,7 +196,14 @@ nav{
     color:white;
 }
 
-/* HERO IMAGE PLACEHOLDER */
+.button-dark:hover{
+    background:#27483e;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
 
 .hero-visual{
     height:500px;
@@ -158,40 +214,25 @@ nav{
 
     position:relative;
 
-    background:
-        linear-gradient(135deg,#d5e1d5,#e8e8dc);
+    background:#dfe8df;
+
+    box-shadow:
+        0 25px 60px rgba(24,49,43,.10);
 }
 
-.hero-visual::before{
-    content:"";
+.hero-photo{
+    width:100%;
+    height:100%;
 
-    position:absolute;
+    object-fit:cover;
 
-    width:420px;
-    height:420px;
+    display:block;
 
-    border-radius:50%;
-
-    background:#a9c2ae;
-
-    left:-130px;
-    bottom:-150px;
+    transition:transform .7s ease;
 }
 
-.hero-visual::after{
-    content:"";
-
-    position:absolute;
-
-    width:280px;
-    height:280px;
-
-    border-radius:50%;
-
-    background:#dfd2b5;
-
-    right:-100px;
-    top:-80px;
+.hero-visual:hover .hero-photo{
+    transform:scale(1.025);
 }
 
 .hero-image-note{
@@ -203,9 +244,10 @@ nav{
 
     padding:22px;
 
-    background:rgba(255,255,255,.62);
+    background:rgba(255,255,255,.68);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
     border-radius:18px;
 
@@ -213,19 +255,27 @@ nav{
 
     font-size:20px;
 
+    line-height:1.35;
+
     z-index:2;
 }
 
-/* SECTIONS */
+
+/* =========================================================
+   SECTIONS
+========================================================= */
 
 section{
     padding:110px 0;
+
     border-top:1px solid #dfe5df;
 }
 
 .section-header{
     display:flex;
+
     justify-content:space-between;
+
     align-items:flex-end;
 
     gap:40px;
@@ -241,22 +291,33 @@ section{
     line-height:.95;
 
     font-weight:500;
+
+    letter-spacing:-.035em;
 }
 
 .section-intro{
     max-width:450px;
+
     color:#68746f;
 }
 
-/* RESEARCH */
+
+/* =========================================================
+   RESEARCH
+========================================================= */
 
 .research-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
     gap:20px;
 }
 
 .research-card{
+    display:block;
+
     background:white;
 
     border:1px solid #dfe5df;
@@ -265,16 +326,16 @@ section{
 
     padding:30px;
 
-    transition:.25s;
-
-    cursor:pointer;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
 }
 
 .research-card:hover{
     transform:translateY(-6px);
 
     box-shadow:
-    0 18px 45px rgba(24,49,43,.08);
+        0 18px 45px rgba(24,49,43,.08);
 }
 
 .research-number{
@@ -307,7 +368,9 @@ section{
 
 .tags{
     display:flex;
+
     flex-wrap:wrap;
+
     gap:7px;
 
     margin-top:22px;
@@ -335,14 +398,23 @@ section{
     font-weight:700;
 }
 
-/* FIELD RESEARCH */
+
+/* =========================================================
+   FIELD RESEARCH
+========================================================= */
+
+.field-grid{
+    display:grid;
+
+    gap:25px;
+}
 
 .nz-card{
     display:grid;
 
-    grid-template-columns:1fr 1fr;
-
-    gap:0;
+    grid-template-columns:
+        minmax(0,1fr)
+        minmax(0,1fr);
 
     overflow:hidden;
 
@@ -356,13 +428,6 @@ section{
 .nz-image{
     min-height:420px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #b8cdbd,
-            #dce4d6
-        );
-
     display:flex;
 
     align-items:flex-end;
@@ -372,6 +437,26 @@ section{
     font-family:Georgia,serif;
 
     font-size:26px;
+
+    line-height:1.2;
+
+    color:#18312b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b8cdbd,
+            #dce4d6
+        );
+}
+
+.nz-image.yunnan{
+    background:
+        linear-gradient(
+            135deg,
+            #a9c4aa,
+            #d8dfc9
+        );
 }
 
 .nz-content{
@@ -379,6 +464,8 @@ section{
 }
 
 .nz-content h3{
+    margin-top:12px;
+
     font-family:Georgia,serif;
 
     font-size:34px;
@@ -394,12 +481,16 @@ section{
     color:#68746f;
 }
 
-/* METHODS */
+
+/* =========================================================
+   METHODS
+========================================================= */
 
 .methods-grid{
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
 
     gap:15px;
 }
@@ -430,12 +521,17 @@ section{
     font-size:14px;
 }
 
-/* ABOUT */
+
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about-grid{
     display:grid;
 
-    grid-template-columns:.7fr 1.3fr;
+    grid-template-columns:
+        minmax(0,.7fr)
+        minmax(0,1.3fr);
 
     gap:90px;
 }
@@ -461,7 +557,8 @@ section{
 .facts{
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:
+        repeat(2,minmax(0,1fr));
 
     gap:14px;
 
@@ -488,14 +585,20 @@ section{
     letter-spacing:.1em;
 
     text-transform:uppercase;
+
+    margin-bottom:5px;
 }
 
-/* BEYOND RESEARCH */
+
+/* =========================================================
+   BEYOND RESEARCH
+========================================================= */
 
 .beyond-grid{
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
 
     gap:18px;
 }
@@ -510,6 +613,17 @@ section{
     border:1px solid #dfe5df;
 
     min-height:250px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.beyond-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(24,49,43,.07);
 }
 
 .beyond-icon{
@@ -532,8 +646,6 @@ section{
     color:#68746f;
 }
 
-/* EXPEDITION */
-
 .expedition{
     margin-top:20px;
 
@@ -549,6 +661,8 @@ section{
 
     font-size:34px;
 
+    line-height:1.2;
+
     font-weight:500;
 }
 
@@ -560,7 +674,10 @@ section{
     color:#53635d;
 }
 
-/* JOURNEY */
+
+/* =========================================================
+   TIMELINE
+========================================================= */
 
 .timeline{
     position:relative;
@@ -573,7 +690,11 @@ section{
 .timeline-item{
     position:relative;
 
-    padding:0 0 45px 40px;
+    padding:
+        0
+        0
+        45px
+        40px;
 }
 
 .timeline-item::before{
@@ -618,7 +739,10 @@ section{
     color:#68746f;
 }
 
-/* CV */
+
+/* =========================================================
+   CV
+========================================================= */
 
 .cv-box{
     padding:35px;
@@ -644,10 +768,18 @@ section{
     color:#68746f;
 }
 
-/* VIDEO */
+
+/* =========================================================
+   VIDEO
+========================================================= */
 
 .video-section{
     text-align:center;
+}
+
+.video-section .section-intro{
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .video-box{
@@ -678,9 +810,7 @@ section{
 
     font-family:Georgia,serif;
 
-    font-size:24px;
-
-    padding:30px;
+    font-size:40px;
 }
 
 .video-placeholder span{
@@ -688,17 +818,28 @@ section{
 
     margin-top:10px;
 
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
     font-size:13px;
 
     color:#68746f;
 }
 
-/* FOOTER */
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer{
-    padding:60px 0 80px;
+    padding:
+        60px
+        0
+        80px;
 
     color:#68746f;
 
@@ -706,12 +847,21 @@ footer{
 
     justify-content:space-between;
 
+    gap:30px;
+
     font-size:14px;
 }
 
-/* MOBILE */
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media(max-width:800px){
+
+    nav{
+        height:64px;
+    }
 
     .nav-links{
         display:none;
@@ -720,15 +870,43 @@ footer{
     .hero{
         grid-template-columns:1fr;
 
-        padding:75px 0;
+        min-height:auto;
+
+        padding:
+            80px
+            0
+            90px;
+
+        gap:50px;
+    }
+
+    .hero h1{
+        font-size:
+            clamp(
+                56px,
+                15vw,
+                82px
+            );
+    }
+
+    .hero-description{
+        font-size:17px;
     }
 
     .hero-visual{
-        height:360px;
+        height:380px;
+
+        border-radius:24px;
+    }
+
+    section{
+        padding:80px 0;
     }
 
     .section-header{
         display:block;
+
+        margin-bottom:35px;
     }
 
     .section-intro{
@@ -747,14 +925,27 @@ footer{
         min-height:280px;
     }
 
+    .nz-content{
+        padding:30px;
+    }
+
+    .nz-content h3{
+        font-size:30px;
+    }
+
     .methods-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
     }
 
     .about-grid{
         grid-template-columns:1fr;
 
         gap:45px;
+    }
+
+    .big-quote{
+        font-size:27px;
     }
 
     .beyond-grid{
@@ -765,19 +956,74 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .expedition{
+        padding:30px;
+    }
+
+    .expedition h3{
+        font-size:28px;
+    }
+
     footer{
         display:block;
     }
+
+    footer div+div{
+        margin-top:10px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:480px){
+
+    .container{
+        width:88%;
+    }
+
+    .hero{
+        padding-top:60px;
+    }
+
+    .hero-visual{
+        height:330px;
+    }
+
+    .hero-image-note{
+        left:18px;
+        right:18px;
+        bottom:18px;
+
+        padding:17px;
+
+        font-size:17px;
+    }
+
+    .methods-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:46px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- NAV -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <nav>
 
@@ -806,13 +1052,17 @@ YIYI DENG
 </nav>
 
 
-
 <main class="container">
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-<section class="hero" style="border-top:none;">
+<section
+    class="hero"
+    style="border-top:none;"
+>
 
 <div>
 
@@ -835,11 +1085,17 @@ understand environmental change.
 
 <div class="hero-buttons">
 
-<a class="button button-dark" href="#research">
+<a
+    class="button button-dark"
+    href="#research"
+>
 Explore my research ↓
 </a>
 
-<a class="button" href="#about">
+<a
+    class="button"
+    href="#about"
+>
 About me
 </a>
 
@@ -850,24 +1106,27 @@ About me
 
 <div class="hero-visual">
 
-    <img
-        src="hero.jpg"
-        alt="Yiyi Deng exploring a temperate rainforest"
-        class="hero-photo"
-    >
+<img
+    src="hero.jpg"
+    alt="Yiyi Deng exploring a temperate rainforest"
+    class="hero-photo"
+>
 
-    <div class="hero-image-note">
-        Seeing the world through
-        the eyes of nature.
-    </div>
+<div class="hero-image-note">
+
+Seeing the world through
+the eyes of nature.
+
+</div>
 
 </div>
 
 </section>
 
 
-
-<!-- RESEARCH -->
+<!-- =====================================================
+     RESEARCH
+===================================================== -->
 
 <section id="research">
 
@@ -893,7 +1152,10 @@ Click a project to explore the research in more detail.
 <div class="research-grid">
 
 
-<a href="bird-resilience.html" class="research-card">
+<a
+    href="bird-resilience.html"
+    class="research-card"
+>
 
 <div class="research-number">
 01 · BIODIVERSITY & CLIMATE
@@ -913,11 +1175,8 @@ future climate scenarios.
 <div class="tags">
 
 <span class="tag">MaxEnt</span>
-
 <span class="tag">GIS</span>
-
 <span class="tag">ACR</span>
-
 <span class="tag">XGBoost–SHAP</span>
 
 </div>
@@ -929,8 +1188,10 @@ Explore project →
 </a>
 
 
-
-<a href="wildfire.html" class="research-card">
+<a
+    href="wildfire.html"
+    class="research-card"
+>
 
 <div class="research-number">
 02 · WILDFIRE & BIODIVERSITY
@@ -950,11 +1211,8 @@ remote sensing and spatial analysis.
 <div class="tags">
 
 <span class="tag">Sentinel-2</span>
-
 <span class="tag">U-Net</span>
-
 <span class="tag">dNBR</span>
-
 <span class="tag">MGWR</span>
 
 </div>
@@ -966,8 +1224,10 @@ Explore project →
 </a>
 
 
-
-<a href="primates.html" class="research-card">
+<a
+    href="primates.html"
+    class="research-card"
+>
 
 <div class="research-number">
 03 · SPECIES DISTRIBUTION
@@ -987,9 +1247,7 @@ distribution modeling.
 <div class="tags">
 
 <span class="tag">MaxEnt</span>
-
 <span class="tag">SDM</span>
-
 <span class="tag">Niche Analysis</span>
 
 </div>
@@ -1006,8 +1264,9 @@ Explore project →
 </section>
 
 
-
-<!-- FIELD RESEARCH -->
+<!-- =====================================================
+     FIELD RESEARCH
+===================================================== -->
 
 <section id="field">
 
@@ -1028,6 +1287,11 @@ observation and fieldwork.
 
 </div>
 
+
+<div class="field-grid">
+
+
+<!-- NEW ZEALAND -->
 
 <div class="nz-card">
 
@@ -1069,11 +1333,8 @@ I was able to observe it directly.
 <div class="tags">
 
 <span class="tag">Field Survey</span>
-
 <span class="tag">Species Diversity</span>
-
 <span class="tag">Ecology</span>
-
 <span class="tag">Observation</span>
 
 </div>
@@ -1087,78 +1348,74 @@ Field notes coming soon
 </div>
 
 </div>
-</div>
 
 
-</div>
-
-
-<!-- YUNNAN FIELD RESEARCH -->
+<!-- YUNNAN -->
 
 <div class="nz-card">
 
-    <div class="nz-image" style="
-        background:
-            linear-gradient(
-                135deg,
-                #a9c4aa,
-                #d8dfc9
-            );
-    ">
-        Yunnan<br>
-        Primate Field Research
-    </div>
+<div class="nz-image yunnan">
 
-    <div class="nz-content">
+Yunnan<br>
+Primate Field Research
 
-        <div class="eyebrow">
-            FIELD RESEARCH · YUNNAN, CHINA
-        </div>
+</div>
 
-        <h3>
-            Observing primates<br>
-            in the field
-        </h3>
+<div class="nz-content">
 
-        <p>
-            In the mountains of Yunnan, I participated in
-            field research focused on primates and their
-            natural habitats.
-        </p>
+<div class="eyebrow">
+FIELD RESEARCH · YUNNAN, CHINA
+</div>
 
-        <p>
-            This experience allowed me to observe biodiversity
-            directly and understand how field observations can
-            complement ecological research and spatial analysis.
-        </p>
+<h3>
+Observing primates<br>
+in the field
+</h3>
 
-        <div class="tags">
+<p>
 
-            <span class="tag">Field Survey</span>
+In the mountains of Yunnan, I participated in
+field research focused on primates and their
+natural habitats.
 
-            <span class="tag">Primates</span>
+</p>
 
-            <span class="tag">Biodiversity</span>
+<p>
 
-            <span class="tag">Field Observation</span>
+This experience allowed me to observe biodiversity
+directly and understand how field observations can
+complement ecological research and spatial analysis.
 
-        </div>
+</p>
 
-        <br>
+<div class="tags">
 
-        <a class="button" href="#">
-            Field notes coming soon
-        </a>
+<span class="tag">Field Survey</span>
+<span class="tag">Primates</span>
+<span class="tag">Biodiversity</span>
+<span class="tag">Field Observation</span>
 
-    </div>
+</div>
+
+<br>
+
+<a class="button" href="#">
+Field notes coming soon
+</a>
+
+</div>
+
+</div>
+
 
 </div>
 
 </section>
 
 
-
-<!-- HOW I WORK -->
+<!-- =====================================================
+     HOW I WORK
+===================================================== -->
 
 <section>
 
@@ -1241,12 +1498,14 @@ R · Python · MaxEnt · XGBoost · SHAP · U-Net
 </section>
 
 
-
-<!-- ABOUT -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section id="about">
 
 <div class="about-grid">
+
 
 <div>
 
@@ -1288,6 +1547,7 @@ geospatial methods to connect environmental
 data with ecological questions.
 
 </p>
+
 
 <div class="facts">
 
@@ -1343,8 +1603,9 @@ Student researcher
 </section>
 
 
-
-<!-- BEYOND RESEARCH -->
+<!-- =====================================================
+     BEYOND RESEARCH
+===================================================== -->
 
 <section id="beyond">
 
@@ -1390,7 +1651,6 @@ packaging.
 </div>
 
 
-
 <div class="beyond-card">
 
 <div class="beyond-icon">
@@ -1410,7 +1670,6 @@ responsibility beyond the classroom.
 </p>
 
 </div>
-
 
 
 <div class="beyond-card">
@@ -1461,8 +1720,9 @@ something people practice too.
 </section>
 
 
-
-<!-- JOURNEY -->
+<!-- =====================================================
+     RESEARCH JOURNEY
+===================================================== -->
 
 <section>
 
@@ -1582,8 +1842,9 @@ spatial data, and conservation questions.
 </section>
 
 
-
-<!-- CV -->
+<!-- =====================================================
+     CV
+===================================================== -->
 
 <section>
 
@@ -1620,7 +1881,10 @@ geospatial analysis.
 
 <br>
 
-<a class="button button-dark" href="CV.pdf">
+<a
+    class="button button-dark"
+    href="CV.pdf"
+>
 View / Download CV
 </a>
 
@@ -1629,22 +1893,28 @@ View / Download CV
 </section>
 
 
+<!-- =====================================================
+     VIDEO ESSAY
+===================================================== -->
 
-<!-- VIDEO ESSAY -->
-
-<section id="story" class="video-section">
+<section
+    id="story"
+    class="video-section"
+>
 
 <div class="eyebrow">
 MY STORY
 </div>
 
-<h2 class="section-title" style="margin-top:15px;">
+<h2
+    class="section-title"
+    style="margin-top:15px;"
+>
 Why I care about<br>
 the living world.
 </h2>
 
-<p class="section-intro"
-style="margin:25px auto 0;">
+<p class="section-intro">
 
 A short video essay about my journey,
 my relationship with nature, and why
@@ -1680,8 +1950,9 @@ Watch on YouTube →
 </main>
 
 
-
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="container">
 

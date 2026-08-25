@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Hiking & Expeditions | Yiyi Deng</title>
+<title>Hiking & Exploration | Yiyi Deng</title>
 
 <style>
 
@@ -27,13 +27,18 @@ color:#18312b;
 line-height:1.7;
 }
 
+img{
+width:100%;
+display:block;
+}
+
 a{
 color:inherit;
 text-decoration:none;
 }
 
 .container{
-width:min(1050px,90%);
+width:min(1100px,90%);
 margin:auto;
 }
 
@@ -62,7 +67,7 @@ color:#68746f;
 }
 
 .hero{
-padding:110px 0 90px;
+padding:100px 0 70px;
 }
 
 .eyebrow{
@@ -73,144 +78,123 @@ letter-spacing:.16em;
 }
 
 h1{
-margin-top:20px;
+margin-top:18px;
 font-family:Georgia,serif;
-font-size:clamp(52px,7vw,82px);
-line-height:1;
+font-size:clamp(55px,8vw,95px);
+line-height:.95;
 font-weight:500;
-max-width:900px;
 }
 
 .lead{
-margin-top:30px;
-max-width:760px;
-font-size:20px;
+margin-top:25px;
+max-width:700px;
+font-size:19px;
 color:#68746f;
 }
 
+.hero-image{
+margin-top:45px;
+height:560px;
+border-radius:28px;
+overflow:hidden;
+}
+
+.hero-image img{
+height:100%;
+object-fit:cover;
+}
+
 .section{
-padding:85px 0;
+padding:75px 0;
 border-top:1px solid #dfe5df;
 }
 
 .section-title{
 font-family:Georgia,serif;
-font-size:40px;
+font-size:42px;
 font-weight:500;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .text{
-max-width:780px;
-font-size:17px;
-color:#596862;
-}
-
-.highlight{
-margin-top:35px;
-padding:35px;
-background:#dfe8df;
-border-radius:22px;
-}
-
-.highlight h2{
-font-family:Georgia,serif;
-font-size:34px;
-font-weight:500;
-}
-
-.highlight p{
-margin-top:12px;
-color:#53635d;
+max-width:720px;
+font-size:16px;
+color:#68746f;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:18px;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
 margin-top:35px;
 }
 
-.photo{
-background:white;
-border:1px solid #dfe5df;
-border-radius:22px;
+.gallery-item{
+height:300px;
+overflow:hidden;
+border-radius:20px;
+background:#dfe8df;
+}
+
+.gallery-item img{
+height:100%;
+object-fit:cover;
+transition:.5s ease;
+}
+
+.gallery-item:hover img{
+transform:scale(1.05);
+}
+
+.wide{
+margin-top:25px;
+height:480px;
+border-radius:25px;
 overflow:hidden;
 }
 
-.photo img{
-width:100%;
-display:block;
+.wide img{
+height:100%;
+object-fit:cover;
 }
 
-.caption{
-padding:14px 18px;
-font-size:13px;
-color:#68746f;
-}
-
-.timeline{
-margin-top:40px;
-border-left:1px solid #b9c9bf;
-margin-left:15px;
-}
-
-.day{
-position:relative;
-padding:0 0 50px 40px;
-}
-
-.day::before{
-content:"";
-position:absolute;
-width:11px;
-height:11px;
-border-radius:50%;
-background:#356b5a;
-left:-6px;
-top:8px;
-}
-
-.day-number{
-font-size:11px;
-font-weight:800;
-letter-spacing:.14em;
-color:#356b5a;
-}
-
-.day h3{
-margin-top:5px;
-font-family:Georgia,serif;
-font-size:28px;
-font-weight:500;
-}
-
-.day p{
-margin-top:8px;
-color:#68746f;
-max-width:700px;
-}
-
-.reflection{
-padding:35px;
-border-radius:22px;
+.quote{
+margin-top:30px;
+padding:40px;
 background:#18312b;
 color:white;
+border-radius:24px;
 font-family:Georgia,serif;
-font-size:25px;
+font-size:27px;
 line-height:1.5;
 }
 
 footer{
 padding:60px 0 80px;
-font-size:14px;
 color:#68746f;
+font-size:14px;
 }
 
-@media(max-width:700px){
+@media(max-width:800px){
+
+.gallery{
+grid-template-columns:1fr 1fr;
+}
+
+.hero-image{
+height:400px;
+}
+
+}
+
+@media(max-width:500px){
 
 .gallery{
 grid-template-columns:1fr;
+}
+
+.gallery-item{
+height:330px;
 }
 
 }
@@ -218,7 +202,6 @@ grid-template-columns:1fr;
 </style>
 
 </head>
-
 
 <body>
 
@@ -238,282 +221,145 @@ YIYI DENG
 
 </nav>
 
-
 <main class="container">
 
-
-<div class="hero">
+<section class="hero">
 
 <div class="eyebrow">
-BEYOND RESEARCH · HIKING & EXPEDITIONS
+OUTDOOR · EXPEDITION · EXPLORATION
 </div>
 
 <h1>
-Six days.<br>
-One trail.
+Hiking &<br>
+Exploration
 </h1>
 
 <p class="lead">
-
-A six-day hiking expedition from Huizhou
-to Hong Kong that challenged my endurance,
-teamwork, and ability to keep moving through
-uncertainty.
-
+Six-day expeditions, long trails, changing conditions,
+and the experience of learning to keep moving.
 </p>
+
+<div class="hero-image">
+
+<img
+src="images/hiking-01.jpg"
+alt="Hiking expedition"
+>
 
 </div>
 
+</section>
 
 
 <section class="section">
 
 <h2 class="section-title">
-The expedition
+Six days on the trail
 </h2>
 
 <p class="text">
 
-The expedition was part of my Duke of Edinburgh's
-Award journey. Over six days, I travelled through
-changing terrain and conditions, carrying my own
-equipment and working with my team to complete
-the route.
+Through the Duke of Edinburgh's Award, I completed
+a six-day hiking expedition from Huizhou to Hong Kong.
+The journey challenged me physically and mentally,
+while giving me the opportunity to experience
+landscapes away from the classroom.
 
 </p>
 
 
-<div class="highlight">
+<div class="gallery">
 
-<h2>
-Huizhou → Hong Kong
-</h2>
+<div class="gallery-item">
+<img src="images/hiking-02.jpg" alt="Hiking">
+</div>
 
-<p>
-6 days · Hiking · Teamwork · Endurance · Exploration
-</p>
+<div class="gallery-item">
+<img src="images/hiking-03.jpg" alt="Hiking trail">
+</div>
+
+<div class="gallery-item">
+<img src="images/hiking-04.jpg" alt="Expedition">
+</div>
+
+<div class="gallery-item">
+<img src="images/hiking-05.jpg" alt="Mountain">
+</div>
+
+<div class="gallery-item">
+<img src="images/hiking-06.jpg" alt="Outdoor adventure">
+</div>
+
+<div class="gallery-item">
+<img src="images/hiking-07.jpg" alt="Hiking journey">
+</div>
 
 </div>
 
 </section>
 
 
-
 <section class="section">
 
-<h2 class="section-title">
-The trail
-</h2>
+<div class="wide">
 
-<div class="timeline">
-
-
-<div class="day">
-
-<div class="day-number">
-DAY 01
-</div>
-
-<h3>
-The beginning
-</h3>
-
-<p>
-The first day was about finding our rhythm,
-learning the route, and adapting to the weight
-of our packs.
-</p>
-
-</div>
-
-
-<div class="day">
-
-<div class="day-number">
-DAY 02
-</div>
-
-<h3>
-Finding the rhythm
-</h3>
-
-<p>
-As the trail became longer, teamwork became
-increasingly important. We learned to adjust
-our pace to the group rather than walking alone.
-</p>
-
-</div>
-
-
-<div class="day">
-
-<div class="day-number">
-DAY 03
-</div>
-
-<h3>
-The mountains
-</h3>
-
-<p>
-The terrain became more demanding. Fatigue
-started to accumulate, but completing each
-section of the trail made the next one feel
-more achievable.
-</p>
-
-</div>
-
-
-<div class="day">
-
-<div class="day-number">
-DAY 04
-</div>
-
-<h3>
-When it became difficult
-</h3>
-
-<p>
-This was when endurance became more than
-physical strength. Supporting one another
-helped the entire team keep going.
-</p>
-
-</div>
-
-
-<div class="day">
-
-<div class="day-number">
-DAY 05
-</div>
-
-<h3>
-Almost there
-</h3>
-
-<p>
-The end was approaching, but fatigue made
-the final stages surprisingly challenging.
-</p>
-
-</div>
-
-
-<div class="day">
-
-<div class="day-number">
-DAY 06
-</div>
-
-<h3>
-The finish
-</h3>
-
-<p>
-Reaching the end of the expedition was less
-about the distance we had covered and more
-about realizing that we had actually made it.
-</p>
-
-</div>
-
+<img
+src="images/hiking-08.jpg"
+alt="Landscape during expedition"
+>
 
 </div>
 
 </section>
 
 
-
 <section class="section">
 
 <h2 class="section-title">
-Moments from the trail
+Small moments
 </h2>
 
 <div class="gallery">
 
-<div class="photo">
+<div class="gallery-item">
+<img src="images/hiking-09.jpg" alt="Hiking">
+</div>
 
-<img
-src="images/hiking-1.jpg"
-alt="Hiking expedition">
+<div class="gallery-item">
+<img src="images/hiking-10.jpg" alt="Hiking">
+</div>
 
-<div class="caption">
-On the trail
+<div class="gallery-item">
+<img src="images/hiking-11.jpg" alt="Hiking">
+</div>
+
+<div class="gallery-item">
+<img src="images/hiking-12.jpg" alt="Hiking">
+</div>
+
+<div class="gallery-item">
+<img src="images/hiking-13.jpg" alt="Hiking">
+</div>
+
+<div class="gallery-item">
+<img src="images/hiking-14.jpg" alt="Hiking">
 </div>
 
 </div>
 
+<div class="quote">
 
-<div class="photo">
-
-<img
-src="images/hiking-2.jpg"
-alt="Hiking expedition">
-
-<div class="caption">
-Exploring the landscape
-</div>
-
-</div>
-
-
-<div class="photo">
-
-<img
-src="images/hiking-3.jpg"
-alt="Hiking team">
-
-<div class="caption">
-The team
-</div>
-
-</div>
-
-
-<div class="photo">
-
-<img
-src="images/hiking-4.jpg"
-alt="Hiking expedition">
-
-<div class="caption">
-A moment along the route
-</div>
-
-</div>
+Resilience is not just an ecological concept.<br>
+It is something people practice too.
 
 </div>
 
 </section>
-
-
-
-<section class="section">
-
-<div class="reflection">
-
-Resilience is not only an ecological concept.
-
-Sometimes it means putting one foot in front
-of the other when the trail becomes difficult.
-
-</div>
-
-</section>
-
 
 </main>
 
-
 <footer class="container">
-
-© 2026 Yiyi Deng · Hiking & Expeditions
-
+© 2026 Yiyi Deng · Hiking & Exploration
 </footer>
 
 </body>

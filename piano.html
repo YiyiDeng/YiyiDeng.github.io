@@ -11,180 +11,191 @@
 <style>
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-background:#f7f7f2;
-color:#18312b;
-line-height:1.7;
-}
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
 
-img{
-width:100%;
-display:block;
+    background:#f7f7f2;
+    color:#18312b;
+    line-height:1.7;
 }
 
 a{
-color:inherit;
-text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
 .container{
-width:min(1100px,90%);
-margin:auto;
+    width:min(1100px,90%);
+    margin:auto;
 }
 
 nav{
-height:72px;
-border-bottom:1px solid #dfe5df;
-display:flex;
-align-items:center;
+    height:72px;
+    border-bottom:1px solid #dfe5df;
+    display:flex;
+    align-items:center;
 }
 
 .nav-inner{
-display:flex;
-justify-content:space-between;
-width:100%;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
 }
 
 .logo{
-font-size:14px;
-font-weight:800;
-letter-spacing:.15em;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.15em;
 }
 
 .back{
-font-size:14px;
-color:#68746f;
+    color:#68746f;
+    font-size:14px;
 }
 
 .hero{
-padding:100px 0 70px;
+    padding:110px 0 90px;
 }
 
 .eyebrow{
-color:#356b5a;
-font-size:12px;
-font-weight:800;
-letter-spacing:.16em;
+    color:#356b5a;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.16em;
 }
 
 h1{
-margin-top:18px;
-font-family:Georgia,serif;
-font-size:clamp(55px,8vw,95px);
-line-height:.95;
-font-weight:500;
+    margin-top:18px;
+    font-family:Georgia,serif;
+    font-size:clamp(60px,8vw,100px);
+    line-height:.9;
+    font-weight:500;
 }
 
 .lead{
-margin-top:25px;
-max-width:700px;
-font-size:19px;
-color:#68746f;
+    margin-top:30px;
+    max-width:720px;
+    font-size:20px;
+    color:#68746f;
 }
 
-.hero-image{
-margin-top:45px;
-height:560px;
-border-radius:28px;
-overflow:hidden;
-}
-
-.hero-image img{
-height:100%;
-object-fit:cover;
-}
-
-.section{
-padding:75px 0;
-border-top:1px solid #dfe5df;
+section{
+    padding:85px 0;
+    border-top:1px solid #dfe5df;
 }
 
 .section-title{
-font-family:Georgia,serif;
-font-size:42px;
-font-weight:500;
-margin-bottom:25px;
+    font-family:Georgia,serif;
+    font-size:45px;
+    line-height:1;
+    font-weight:500;
+    margin-bottom:25px;
 }
 
 .text{
-max-width:720px;
-color:#68746f;
+    max-width:780px;
+    color:#596862;
+    font-size:17px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px;
-margin-top:35px;
+
+/* GALLERY */
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:40px;
 }
 
-.gallery-item{
-height:300px;
-border-radius:20px;
-overflow:hidden;
+.photo{
+    overflow:hidden;
+    border-radius:20px;
 }
 
-.gallery-item img{
-height:100%;
-object-fit:cover;
-transition:.5s ease;
+.photo img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
 }
 
-.gallery-item:hover img{
-transform:scale(1.05);
+.photo:hover img{
+    transform:scale(1.04);
 }
 
-.wide{
-margin-top:30px;
-height:470px;
-border-radius:25px;
-overflow:hidden;
+.photo.wide{
+    grid-column:span 2;
 }
 
-.wide img{
-height:100%;
-object-fit:cover;
+.photo.wide img{
+    height:350px;
 }
+
+
+/* QUOTE */
 
 .quote{
-margin-top:35px;
-padding:40px;
-border-radius:24px;
-background:#18312b;
-color:white;
-font-family:Georgia,serif;
-font-size:27px;
+    margin-top:45px;
+    padding:40px;
+    border-radius:24px;
+    background:#e5ebe3;
+    font-family:Georgia,serif;
+    font-size:29px;
+    line-height:1.45;
 }
 
+
+/* FOOTER */
+
 footer{
-padding:60px 0 80px;
-color:#68746f;
-font-size:14px;
+    padding:60px 0 80px;
+    color:#68746f;
+    font-size:14px;
 }
+
 
 @media(max-width:800px){
 
-.gallery{
-grid-template-columns:1fr 1fr;
-}
+    .photo-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .photo.wide{
+        grid-column:span 2;
+    }
 
 }
 
 @media(max-width:500px){
 
-.gallery{
-grid-template-columns:1fr;
-}
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo.wide{
+        grid-column:span 1;
+    }
+
+    .photo img,
+    .photo.wide img{
+        height:280px;
+    }
 
 }
 
@@ -192,7 +203,9 @@ grid-template-columns:1fr;
 
 </head>
 
+
 <body>
+
 
 <nav>
 
@@ -213,10 +226,13 @@ YIYI DENG
 
 <main class="container">
 
-<section class="hero">
+
+<!-- HERO -->
+
+<div class="hero">
 
 <div class="eyebrow">
-MUSIC · PIANO · CREATIVITY
+BEYOND RESEARCH · MUSIC
 </div>
 
 <h1>
@@ -224,111 +240,130 @@ Piano
 </h1>
 
 <p class="lead">
-A quieter part of my life — music, practice,
-patience, and learning to improve one small
-detail at a time.
+
+A quieter part of my life — learning to listen,
+practice, repeat, and eventually turn notes
+into something expressive.
+
 </p>
 
-<div class="hero-image">
-
-<img
-src="images/piano-01.jpg"
-alt="Playing piano"
->
-
 </div>
 
-</section>
 
+<!-- INTRO -->
 
-<section class="section">
+<section>
 
 <h2 class="section-title">
-Music in my life
+Beyond the classroom
 </h2>
 
-<div class="gallery">
+<p class="text">
 
-<div class="gallery-item">
-<img src="images/piano-02.jpg" alt="Piano">
-</div>
+Piano has been one of the ways I step away from
+academic work and slow down.
 
-<div class="gallery-item">
-<img src="images/piano-03.jpg" alt="Piano keys">
-</div>
+It has taught me patience in a different way:
+progress is often invisible from one day to the
+next, but becomes obvious when looking back.
 
-<div class="gallery-item">
-<img src="images/piano-04.jpg" alt="Music score">
-</div>
-
-<div class="gallery-item">
-<img src="images/piano-05.jpg" alt="Playing piano">
-</div>
-
-<div class="gallery-item">
-<img src="images/piano-06.jpg" alt="Piano practice">
-</div>
-
-<div class="gallery-item">
-<img src="images/piano-07.jpg" alt="Piano">
-</div>
-
-</div>
+</p>
 
 </section>
 
 
-<section class="section">
+<!-- PHOTO GALLERY -->
 
-<div class="wide">
-
-<img
-src="images/piano-08.jpg"
-alt="Piano performance"
->
-
-</div>
-
-</section>
-
-
-<section class="section">
+<section>
 
 <h2 class="section-title">
-Practice & performance
+Moments at the piano
 </h2>
 
-<div class="gallery">
+<p class="text">
 
-<div class="gallery-item">
-<img src="images/piano-09.jpg" alt="Piano practice">
+A collection of performances, practice sessions,
+and small moments from my musical journey.
+
+</p>
+
+
+<div class="photo-grid">
+
+<div class="photo wide">
+<img src="images/piano-01.jpg"
+alt="Playing piano">
 </div>
 
-<div class="gallery-item">
-<img src="images/piano-10.jpg" alt="Piano performance">
+<div class="photo">
+<img src="images/piano-02.jpg"
+alt="Piano">
 </div>
 
-<div class="gallery-item">
-<img src="images/piano-11.jpg" alt="Music">
+<div class="photo">
+<img src="images/piano-03.jpg"
+alt="Piano practice">
+</div>
+
+<div class="photo">
+<img src="images/piano-04.jpg"
+alt="Piano performance">
+</div>
+
+<div class="photo wide">
+<img src="images/piano-05.jpg"
+alt="Piano">
+</div>
+
+<div class="photo">
+<img src="images/piano-06.jpg"
+alt="Piano performance">
+</div>
+
+<div class="photo">
+<img src="images/piano-07.jpg"
+alt="Piano practice">
+</div>
+
+<div class="photo">
+<img src="images/piano-08.jpg"
+alt="Piano">
+</div>
+
+<div class="photo wide">
+<img src="images/piano-09.jpg"
+alt="Piano">
 </div>
 
 </div>
 
+</section>
+
+
+<!-- REFLECTION -->
+
+<section>
 
 <div class="quote">
 
-Music taught me that progress is often
-made quietly, through repetition.
+Sometimes the most meaningful progress
+comes from doing the same small thing
+again — and learning to hear the difference.
 
 </div>
 
 </section>
 
+
 </main>
 
+
 <footer class="container">
+
 © 2026 Yiyi Deng · Piano
+
 </footer>
+
 
 </body>
 </html>

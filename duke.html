@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Duke of Edinburgh's Award | Yiyi Deng</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:#f7f7f2;
+    color:#18312b;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1100px,90%);
+    margin:auto;
+}
+
+nav{
+    height:72px;
+    border-bottom:1px solid #dfe5df;
+    display:flex;
+    align-items:center;
+}
+
+.nav-inner{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.15em;
+}
+
+.back{
+    color:#68746f;
+    font-size:14px;
+}
+
+.hero{
+    padding:110px 0 90px;
+}
+
+.eyebrow{
+    color:#356b5a;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.16em;
+}
+
+h1{
+    margin-top:18px;
+    font-family:Georgia,serif;
+    font-size:clamp(52px,7vw,88px);
+    line-height:.95;
+    font-weight:500;
+}
+
+.lead{
+    margin-top:30px;
+    max-width:760px;
+    font-size:20px;
+    color:#68746f;
+}
+
+section{
+    padding:85px 0;
+    border-top:1px solid #dfe5df;
+}
+
+.section-title{
+    font-family:Georgia,serif;
+    font-size:45px;
+    line-height:1;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.text{
+    max-width:780px;
+    color:#596862;
+    font-size:17px;
+}
+
+
+/* PHOTO GRID */
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:40px;
+}
+
+.photo{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.photo img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.photo:hover img{
+    transform:scale(1.04);
+}
+
+.photo.wide{
+    grid-column:span 2;
+}
+
+.photo.wide img{
+    height:340px;
+}
+
+
+/* SMALL BADMINTON */
+
+.small-section{
+    background:#eef2ed;
+    border-radius:24px;
+    padding:45px;
+    margin-top:30px;
+}
+
+.small-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:30px;
+}
+
+.small-gallery img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    border-radius:17px;
+}
+
+
+/* EXPEDITION */
+
+.expedition-box{
+    margin-top:40px;
+    padding:35px;
+    border-radius:22px;
+    background:#e0e9df;
+}
+
+.expedition-box h3{
+    font-family:Georgia,serif;
+    font-size:31px;
+    font-weight:500;
+}
+
+.expedition-box p{
+    margin-top:10px;
+    color:#53635d;
+}
+
+
+/* REFLECTION */
+
+.reflection{
+    padding:40px;
+    border-radius:24px;
+    background:#18312b;
+    color:white;
+    font-family:Georgia,serif;
+    font-size:27px;
+    line-height:1.45;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:60px 0 80px;
+    color:#68746f;
+    font-size:14px;
+}
+
+
+@media(max-width:800px){
+
+    .photo-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .photo.wide{
+        grid-column:span 2;
+    }
+
+    .small-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:500px){
+
+    .photo-grid,
+    .small-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .photo.wide{
+        grid-column:span 1;
+    }
+
+    .photo img,
+    .photo.wide img{
+        height:280px;
+    }
+
+    .small-gallery img{
+        height:260px;
+    }
+
+    .small-section{
+        padding:30px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="container nav-inner">
+
+<a class="logo" href="index.html">
+YIYI DENG
+</a>
+
+<a class="back" href="index.html">
+← Back to portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="eyebrow">
+BEYOND RESEARCH · DUKE OF EDINBURGH'S AWARD
+</div>
+
+<h1>
+Duke of<br>
+Edinburgh's Award
+</h1>
+
+<p class="lead">
+
+A journey built around learning a new skill,
+staying active, exploring the outdoors,
+and becoming more independent.
+
+</p>
+
+</div>
+
+
+<!-- INTRO -->
+
+<section>
+
+<h2 class="section-title">
+Silver Award
+</h2>
+
+<p class="text">
+
+The Duke of Edinburgh's Award challenged me
+to step outside the classroom and develop
+skills through long-term commitment.
+
+My journey combined French as a skill,
+badminton as physical recreation, and a
+multi-day expedition.
+
+</p>
+
+</section>
+
+
+<!-- FRENCH -->
+
+<section>
+
+<div class="eyebrow">
+01 · SKILL
+</div>
+
+<h2 class="section-title">
+Learning French
+</h2>
+
+<p class="text">
+
+Learning French became an exercise in consistency.
+Instead of expecting progress immediately, I built
+a habit of returning to the language repeatedly —
+learning vocabulary, practicing pronunciation,
+and tracking my progress over time.
+
+</p>
+
+
+<div class="photo-grid">
+
+<div class="photo wide">
+<img src="images/duke-french-01.jpg"
+alt="French learning">
+</div>
+
+<div class="photo">
+<img src="images/duke-french-02.jpg"
+alt="French study">
+</div>
+
+<div class="photo">
+<img src="images/duke-french-03.jpg"
+alt="French learning record">
+</div>
+
+<div class="photo">
+<img src="images/duke-french-04.jpg"
+alt="French practice">
+</div>
+
+<div class="photo">
+<img src="images/duke-french-05.jpg"
+alt="French study record">
+</div>
+
+<div class="photo wide">
+<img src="images/duke-french-06.jpg"
+alt="French learning journey">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BADMINTON SMALL -->
+
+<section>
+
+<div class="small-section">
+
+<div class="eyebrow">
+02 · PHYSICAL RECREATION
+</div>
+
+<h2 class="section-title">
+Badminton
+</h2>
+
+<p class="text">
+
+Badminton was part of my DofE physical recreation,
+but my connection with the sport extends beyond
+the award itself.
+
+</p>
+
+<div class="small-gallery">
+
+<img src="images/duke-badminton-01.jpg"
+alt="Badminton">
+
+<img src="images/duke-badminton-02.jpg"
+alt="Badminton">
+
+<img src="images/duke-badminton-03.jpg"
+alt="Badminton">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPEDITION -->
+
+<section>
+
+<div class="eyebrow">
+03 · EXPEDITION
+</div>
+
+<h2 class="section-title">
+Six days on the trail
+</h2>
+
+<p class="text">
+
+The expedition was one of the most memorable
+parts of my DofE experience.
+
+Over six days, I hiked from Huizhou toward
+Hong Kong, carrying my own equipment,
+working with teammates, and adapting to
+changing conditions along the trail.
+
+</p>
+
+
+<div class="expedition-box">
+
+<h3>
+Huizhou → Hong Kong
+</h3>
+
+<p>
+
+Six days · Hiking · Teamwork · Navigation ·
+Perseverance
+
+</p>
+
+</div>
+
+
+<div class="photo-grid">
+
+<div class="photo wide">
+<img src="images/duke-expedition-01.jpg"
+alt="DofE expedition">
+</div>
+
+<div class="photo">
+<img src="images/duke-expedition-02.jpg"
+alt="Hiking expedition">
+</div>
+
+<div class="photo">
+<img src="images/duke-expedition-03.jpg"
+alt="Hiking">
+</div>
+
+<div class="photo">
+<img src="images/duke-expedition-04.jpg"
+alt="Expedition">
+</div>
+
+<div class="photo wide">
+<img src="images/duke-expedition-05.jpg"
+alt="Hiking trail">
+</div>
+
+<div class="photo">
+<img src="images/duke-expedition-06.jpg"
+alt="Expedition team">
+</div>
+
+<div class="photo">
+<img src="images/duke-expedition-07.jpg"
+alt="Hiking">
+</div>
+
+<div class="photo">
+<img src="images/duke-expedition-08.jpg"
+alt="DofE expedition">
+</div>
+
+<div class="photo wide">
+<img src="images/duke-expedition-09.jpg"
+alt="Expedition landscape">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REFLECTION -->
+
+<section>
+
+<div class="reflection">
+
+The award taught me that resilience is not
+only something I study in ecosystems.
+
+It is also something I experience —
+by returning to a language, stepping onto
+the court, and continuing along a trail
+when the journey becomes difficult.
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer class="container">
+
+© 2026 Yiyi Deng · Duke of Edinburgh's Award
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Piano | Yiyi Deng</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+background:#f7f7f2;
+color:#18312b;
+line-height:1.7;
+}
+
+img{
+width:100%;
+display:block;
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.container{
+width:min(1100px,90%);
+margin:auto;
+}
+
+nav{
+height:72px;
+border-bottom:1px solid #dfe5df;
+display:flex;
+align-items:center;
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+width:100%;
+}
+
+.logo{
+font-size:14px;
+font-weight:800;
+letter-spacing:.15em;
+}
+
+.back{
+font-size:14px;
+color:#68746f;
+}
+
+.hero{
+padding:100px 0 70px;
+}
+
+.eyebrow{
+color:#356b5a;
+font-size:12px;
+font-weight:800;
+letter-spacing:.16em;
+}
+
+h1{
+margin-top:18px;
+font-family:Georgia,serif;
+font-size:clamp(55px,8vw,95px);
+line-height:.95;
+font-weight:500;
+}
+
+.lead{
+margin-top:25px;
+max-width:700px;
+font-size:19px;
+color:#68746f;
+}
+
+.hero-image{
+margin-top:45px;
+height:560px;
+border-radius:28px;
+overflow:hidden;
+}
+
+.hero-image img{
+height:100%;
+object-fit:cover;
+}
+
+.section{
+padding:75px 0;
+border-top:1px solid #dfe5df;
+}
+
+.section-title{
+font-family:Georgia,serif;
+font-size:42px;
+font-weight:500;
+margin-bottom:25px;
+}
+
+.text{
+max-width:720px;
+color:#68746f;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin-top:35px;
+}
+
+.gallery-item{
+height:300px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.gallery-item img{
+height:100%;
+object-fit:cover;
+transition:.5s ease;
+}
+
+.gallery-item:hover img{
+transform:scale(1.05);
+}
+
+.wide{
+margin-top:30px;
+height:470px;
+border-radius:25px;
+overflow:hidden;
+}
+
+.wide img{
+height:100%;
+object-fit:cover;
+}
+
+.quote{
+margin-top:35px;
+padding:40px;
+border-radius:24px;
+background:#18312b;
+color:white;
+font-family:Georgia,serif;
+font-size:27px;
+}
+
+footer{
+padding:60px 0 80px;
+color:#68746f;
+font-size:14px;
+}
+
+@media(max-width:800px){
+
+.gallery{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="container nav-inner">
+
+<a class="logo" href="index.html">
+YIYI DENG
+</a>
+
+<a class="back" href="index.html">
+← Back to portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+<main class="container">
+
+<section class="hero">
+
+<div class="eyebrow">
+MUSIC · PIANO · CREATIVITY
+</div>
+
+<h1>
+Piano
+</h1>
+
+<p class="lead">
+A quieter part of my life — music, practice,
+patience, and learning to improve one small
+detail at a time.
+</p>
+
+<div class="hero-image">
+
+<img
+src="images/piano-01.jpg"
+alt="Playing piano"
+>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title">
+Music in my life
+</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="images/piano-02.jpg" alt="Piano">
+</div>
+
+<div class="gallery-item">
+<img src="images/piano-03.jpg" alt="Piano keys">
+</div>
+
+<div class="gallery-item">
+<img src="images/piano-04.jpg" alt="Music score">
+</div>
+
+<div class="gallery-item">
+<img src="images/piano-05.jpg" alt="Playing piano">
+</div>
+
+<div class="gallery-item">
+<img src="images/piano-06.jpg" alt="Piano practice">
+</div>
+
+<div class="gallery-item">
+<img src="images/piano-07.jpg" alt="Piano">
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="wide">
+
+<img
+src="images/piano-08.jpg"
+alt="Piano performance"
+>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2 class="section-title">
+Practice & performance
+</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="images/piano-09.jpg" alt="Piano practice">
+</div>
+
+<div class="gallery-item">
+<img src="images/piano-10.jpg" alt="Piano performance">
+</div>
+
+<div class="gallery-item">
+<img src="images/piano-11.jpg" alt="Music">
+</div>
+
+</div>
+
+
+<div class="quote">
+
+Music taught me that progress is often
+made quietly, through repetition.
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="container">
+© 2026 Yiyi Deng · Piano
+</footer>
+
+</body>
+</html>

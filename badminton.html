@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Badminton | Yiyi Deng</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:#f7f7f2;
+    color:#18312b;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1100px,90%);
+    margin:auto;
+}
+
+nav{
+    height:72px;
+    border-bottom:1px solid #dfe5df;
+    display:flex;
+    align-items:center;
+}
+
+.nav-inner{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.15em;
+}
+
+.back{
+    color:#68746f;
+    font-size:14px;
+}
+
+.hero{
+    padding:110px 0 90px;
+}
+
+.eyebrow{
+    color:#356b5a;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.16em;
+}
+
+h1{
+    margin-top:18px;
+    font-family:Georgia,serif;
+    font-size:clamp(60px,8vw,105px);
+    line-height:.9;
+    font-weight:500;
+}
+
+.lead{
+    margin-top:30px;
+    max-width:760px;
+    font-size:20px;
+    color:#68746f;
+}
+
+section{
+    padding:85px 0;
+    border-top:1px solid #dfe5df;
+}
+
+.section-title{
+    font-family:Georgia,serif;
+    font-size:45px;
+    line-height:1;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.text{
+    max-width:780px;
+    color:#596862;
+    font-size:17px;
+}
+
+
+/* LARGE GALLERY */
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:40px;
+}
+
+.photo{
+    overflow:hidden;
+    border-radius:20px;
+    background:#dfe8df;
+}
+
+.photo img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.photo:hover img{
+    transform:scale(1.05);
+}
+
+.photo.wide{
+    grid-column:span 2;
+}
+
+.photo.wide img{
+    height:360px;
+}
+
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:40px;
+}
+
+.stat{
+    padding:28px;
+    background:white;
+    border:1px solid #dfe5df;
+    border-radius:20px;
+}
+
+.stat-number{
+    font-family:Georgia,serif;
+    font-size:40px;
+}
+
+.stat p{
+    margin-top:6px;
+    color:#68746f;
+    font-size:14px;
+}
+
+
+/* REFLECTION */
+
+.reflection{
+    padding:40px;
+    border-radius:24px;
+    background:#18312b;
+    color:white;
+    font-family:Georgia,serif;
+    font-size:28px;
+    line-height:1.45;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:60px 0 80px;
+    color:#68746f;
+    font-size:14px;
+}
+
+
+@media(max-width:800px){
+
+    .photo-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .photo.wide{
+        grid-column:span 2;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo.wide{
+        grid-column:span 1;
+    }
+
+    .photo img,
+    .photo.wide img{
+        height:280px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="container nav-inner">
+
+<a class="logo" href="index.html">
+YIYI DENG
+</a>
+
+<a class="back" href="index.html">
+← Back to portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="eyebrow">
+BEYOND RESEARCH · SPORT
+</div>
+
+<h1>
+Badminton
+</h1>
+
+<p class="lead">
+
+More than a Duke of Edinburgh's Award requirement —
+badminton became a sport I chose to keep returning to.
+
+</p>
+
+</div>
+
+
+<!-- INTRO -->
+
+<section>
+
+<h2 class="section-title">
+Why I play
+</h2>
+
+<p class="text">
+
+Badminton has been part of my life both inside and
+outside the Duke of Edinburgh's Award.
+
+The award gave me a structured reason to train,
+but over time the sport became something I enjoyed
+independently — a way to stay active, challenge
+myself, and spend time with other people.
+
+</p>
+
+
+<div class="stats">
+
+<div class="stat">
+
+<div class="stat-number">
+01
+</div>
+
+<p>
+Training and practice
+</p>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+02
+</div>
+
+<p>
+Games and competition
+</p>
+
+</div>
+
+<div class="stat">
+
+<div class="stat-number">
+03
+</div>
+
+<p>
+A sport I continue beyond DofE
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRAINING -->
+
+<section>
+
+<div class="eyebrow">
+01 · TRAINING
+</div>
+
+<h2 class="section-title">
+Practice
+</h2>
+
+<p class="text">
+
+From basic footwork and serves to longer rallies,
+practice taught me that improvement comes from
+repetition and attention to small details.
+
+</p>
+
+
+<div class="photo-grid">
+
+<div class="photo wide">
+<img src="images/badminton-01.jpg"
+alt="Badminton training">
+</div>
+
+<div class="photo">
+<img src="images/badminton-02.jpg"
+alt="Badminton practice">
+</div>
+
+<div class="photo">
+<img src="images/badminton-03.jpg"
+alt="Badminton">
+</div>
+
+<div class="photo">
+<img src="images/badminton-04.jpg"
+alt="Badminton training">
+</div>
+
+<div class="photo wide">
+<img src="images/badminton-05.jpg"
+alt="Badminton">
+</div>
+
+<div class="photo">
+<img src="images/badminton-06.jpg"
+alt="Badminton">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GAMES -->
+
+<section>
+
+<div class="eyebrow">
+02 · ON COURT
+</div>
+
+<h2 class="section-title">
+Playing
+</h2>
+
+<p class="text">
+
+Some of my favourite moments are not necessarily
+the most successful ones. They are the games,
+rallies, mistakes, and small improvements that
+make the sport enjoyable.
+
+</p>
+
+
+<div class="photo-grid">
+
+<div class="photo">
+<img src="images/badminton-07.jpg"
+alt="Badminton game">
+</div>
+
+<div class="photo wide">
+<img src="images/badminton-08.jpg"
+alt="Badminton match">
+</div>
+
+<div class="photo">
+<img src="images/badminton-09.jpg"
+alt="Badminton">
+</div>
+
+<div class="photo">
+<img src="images/badminton-10.jpg"
+alt="Badminton">
+</div>
+
+<div class="photo wide">
+<img src="images/badminton-11.jpg"
+alt="Badminton">
+</div>
+
+<div class="photo">
+<img src="images/badminton-12.jpg"
+alt="Badminton">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BEYOND DofE -->
+
+<section>
+
+<h2 class="section-title">
+Beyond the award
+</h2>
+
+<p class="text">
+
+Duke of Edinburgh's Award introduced badminton
+as part of my physical recreation, but it does not
+define my relationship with the sport.
+
+I continue to play because I enjoy the process —
+the movement, competition, concentration, and
+the feeling of gradually getting better.
+
+</p>
+
+</section>
+
+
+<!-- REFLECTION -->
+
+<section>
+
+<div class="reflection">
+
+I did not keep playing badminton simply because
+I had to.
+
+I kept playing because I wanted to.
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer class="container">
+
+© 2026 Yiyi Deng · Badminton
+
+</footer>
+
+
+</body>
+</html>

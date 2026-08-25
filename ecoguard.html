@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EcoGuard | Yiyi Deng</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:#f7f7f2;
+    color:#18312b;
+    line-height:1.7;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1100px,90%);
+    margin:auto;
+}
+
+
+/* NAV */
+
+nav{
+    height:72px;
+    border-bottom:1px solid #dfe5df;
+    display:flex;
+    align-items:center;
+}
+
+.nav-inner{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.15em;
+}
+
+.back{
+    color:#68746f;
+    font-size:14px;
+}
+
+
+/* HERO */
+
+.hero{
+    padding:110px 0 90px;
+}
+
+.eyebrow{
+    color:#356b5a;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.16em;
+}
+
+h1{
+    margin-top:18px;
+    font-family:Georgia,serif;
+    font-size:clamp(55px,8vw,95px);
+    line-height:.95;
+    font-weight:500;
+    letter-spacing:-.04em;
+}
+
+.lead{
+    margin-top:30px;
+    max-width:760px;
+    font-size:20px;
+    color:#68746f;
+}
+
+
+/* SECTIONS */
+
+section{
+    padding:85px 0;
+    border-top:1px solid #dfe5df;
+}
+
+.section-title{
+    font-family:Georgia,serif;
+    font-size:45px;
+    font-weight:500;
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.text{
+    max-width:780px;
+    color:#596862;
+    font-size:17px;
+}
+
+
+/* PHOTO GRID */
+
+.photo-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:40px;
+}
+
+.photo{
+    overflow:hidden;
+    border-radius:20px;
+    background:#dfe8df;
+}
+
+.photo img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+}
+
+.photo:hover img{
+    transform:scale(1.04);
+}
+
+.photo.wide{
+    grid-column:span 2;
+}
+
+.photo.wide img{
+    height:340px;
+}
+
+.caption{
+    padding:10px 4px 0;
+    font-size:13px;
+    color:#68746f;
+}
+
+
+/* HIGHLIGHT */
+
+.highlight{
+    margin-top:40px;
+    padding:35px;
+    border-radius:22px;
+    background:#e1ebe2;
+}
+
+.highlight h3{
+    font-family:Georgia,serif;
+    font-size:30px;
+    font-weight:500;
+}
+
+.highlight p{
+    margin-top:10px;
+    color:#53635d;
+}
+
+
+/* FOOTER */
+
+footer{
+    padding:60px 0 80px;
+    color:#68746f;
+    font-size:14px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .photo-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .photo.wide{
+        grid-column:span 2;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero{
+        padding:75px 0;
+    }
+
+    .photo-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photo.wide{
+        grid-column:span 1;
+    }
+
+    .photo img,
+    .photo.wide img{
+        height:280px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="container nav-inner">
+
+<a class="logo" href="index.html">
+YIYI DENG
+</a>
+
+<a class="back" href="index.html">
+← Back to portfolio
+</a>
+
+</div>
+
+</nav>
+
+
+<main class="container">
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="eyebrow">
+BEYOND RESEARCH · ECOGUARD
+</div>
+
+<h1>
+EcoGuard
+</h1>
+
+<p class="lead">
+
+Turning environmental awareness into practical
+change within my school community.
+
+</p>
+
+</div>
+
+
+<!-- STORY -->
+
+<section>
+
+<h2 class="section-title">
+From awareness<br>to action
+</h2>
+
+<p class="text">
+
+Through EcoGuard, I worked with my school community
+to promote more sustainable everyday practices.
+One project focused on reducing unnecessary plastic
+packaging in the school cafeteria and encouraging
+the transition toward biodegradable alternatives.
+
+</p>
+
+
+<div class="highlight">
+
+<h3>
+Small changes can become visible changes.
+</h3>
+
+<p>
+
+Rather than thinking about sustainability only as
+a large-scale environmental problem, I wanted to
+explore how everyday decisions within a community
+could also contribute to a more sustainable campus.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PHOTO GALLERY -->
+
+<section>
+
+<h2 class="section-title">
+The project
+</h2>
+
+<p class="text">
+
+A collection of moments from EcoGuard activities,
+campaigns, discussions, and environmental initiatives.
+
+</p>
+
+
+<div class="photo-grid">
+
+<div class="photo wide">
+<img src="images/ecoguard-01.jpg"
+alt="EcoGuard activity">
+</div>
+
+<div class="photo">
+<img src="images/ecoguard-02.jpg"
+alt="EcoGuard project">
+</div>
+
+<div class="photo">
+<img src="images/ecoguard-03.jpg"
+alt="EcoGuard activity">
+</div>
+
+<div class="photo">
+<img src="images/ecoguard-04.jpg"
+alt="Environmental project">
+</div>
+
+<div class="photo wide">
+<img src="images/ecoguard-05.jpg"
+alt="School sustainability project">
+</div>
+
+<div class="photo">
+<img src="images/ecoguard-06.jpg"
+alt="EcoGuard">
+</div>
+
+<div class="photo">
+<img src="images/ecoguard-07.jpg"
+alt="EcoGuard">
+</div>
+
+<div class="photo">
+<img src="images/ecoguard-08.jpg"
+alt="EcoGuard">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REFLECTION -->
+
+<section>
+
+<h2 class="section-title">
+What I learned
+</h2>
+
+<p class="text">
+
+Environmental change does not always begin with
+large scientific projects. Sometimes it begins with
+a conversation, a different choice, or a small change
+in the environment immediately around us.
+
+EcoGuard gave me an opportunity to experience
+environmental action from a community perspective.
+
+</p>
+
+</section>
+
+
+</main>
+
+
+<footer class="container">
+
+© 2026 Yiyi Deng · EcoGuard
+
+</footer>
+
+
+</body>
+</html>

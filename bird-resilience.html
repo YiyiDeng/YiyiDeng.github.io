@@ -375,12 +375,23 @@ h1{
 
 
 /* =====================================================
-   METHODOLOGY
+   RESEARCH JOURNEY
 ===================================================== */
 
-.flow{
+.research-journey{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
 
     margin-top:40px;
+}
+
+.stage{
+
+    position:relative;
 
     padding:32px;
 
@@ -388,15 +399,80 @@ h1{
 
     border:1px solid #dfe5df;
 
-    border-radius:21px;
+    border-radius:22px;
 
-    text-align:center;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.stage:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(24,49,43,.07);
+}
+
+.stage-number{
+
+    color:#356b5a;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+}
+
+.stage h3{
+
+    margin-top:12px;
 
     font-family:Georgia,serif;
 
-    font-size:21px;
+    font-size:28px;
 
-    line-height:2;
+    line-height:1.2;
+
+    font-weight:500;
+}
+
+.stage p{
+
+    margin-top:11px;
+
+    color:#68746f;
+
+    font-size:15px;
+}
+
+.stage-process{
+
+    margin-top:20px;
+
+    padding-top:17px;
+
+    border-top:1px solid #e5e9e5;
+
+    color:#315548;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1.8;
+}
+
+.stage-process span{
+
+    display:block;
+
+    color:#68746f;
+
+    font-weight:400;
 }
 
 

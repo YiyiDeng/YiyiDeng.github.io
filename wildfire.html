@@ -1,85 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
 <title>California Wildfire & Biodiversity | Yiyi Deng</title>
-
 <style>
-
 *{
 box-sizing:border-box;
 margin:0;
 padding:0;
 }
-
 html{
 scroll-behavior:smooth;
 }
-
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
 background:#f7f7f2;
 color:#18312b;
 line-height:1.7;
 }
-
 a{
 color:inherit;
 text-decoration:none;
 }
-
 .container{
 width:min(1050px,90%);
 margin:auto;
 }
-
-
 /* NAVIGATION */
-
 nav{
 height:72px;
 border-bottom:1px solid #dfe5df;
 display:flex;
 align-items:center;
 }
-
 .nav-inner{
 display:flex;
 justify-content:space-between;
 width:100%;
 }
-
 .logo{
 font-size:14px;
 font-weight:800;
 letter-spacing:.15em;
 }
-
 .back{
 font-size:14px;
 color:#68746f;
 }
-
-
 /* HERO */
-
 .hero{
 padding:110px 0 90px;
 }
-
 .eyebrow{
 color:#356b5a;
 font-size:12px;
 font-weight:800;
 letter-spacing:.16em;
 }
-
 h1{
 margin-top:20px;
 font-family:Georgia,serif;
@@ -88,14 +65,12 @@ line-height:1;
 font-weight:500;
 max-width:900px;
 }
-
 .lead{
 margin-top:30px;
 max-width:760px;
 font-size:20px;
 color:#68746f;
 }
-
 .conference-tag{
 display:inline-block;
 margin-top:30px;
@@ -108,77 +83,98 @@ letter-spacing:.08em;
 color:#315548;
 background:#eef2ed;
 }
-
-
 /* SECTIONS */
-
 .section{
 padding:85px 0;
 border-top:1px solid #dfe5df;
 }
-
 .section-title{
 font-family:Georgia,serif;
 font-size:40px;
 font-weight:500;
 margin-bottom:25px;
 }
-
 .text{
 max-width:780px;
 font-size:17px;
 color:#596862;
 }
-
-
 /* FIRE EVENTS */
-
 .fire-events{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:15px;
 margin-top:35px;
 }
-
 .event{
 padding:28px;
 border-radius:20px;
 background:white;
 border:1px solid #dfe5df;
 }
-
 .event strong{
 display:block;
 font-family:Georgia,serif;
 font-size:24px;
 font-weight:500;
 }
-
 .event span{
 display:block;
 margin-top:5px;
 font-size:13px;
 color:#68746f;
 }
-
-
-/* RESEARCH FLOW */
-
-.flow{
-margin-top:35px;
-padding:30px;
-border-radius:20px;
-background:#fff;
-border:1px solid #dfe5df;
-text-align:center;
-font-family:Georgia,serif;
-font-size:21px;
-line-height:2;
+/* RESEARCH JOURNEY */
+.research-journey{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+margin-top:40px;
 }
-
-
+.stage{
+position:relative;
+padding:32px;
+border-radius:22px;
+background:white;
+border:1px solid #dfe5df;
+transition:transform .25s ease, box-shadow .25s ease;
+}
+.stage:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(24,49,43,.07);
+}
+.stage-number{
+font-size:11px;
+font-weight:800;
+letter-spacing:.15em;
+color:#356b5a;
+}
+.stage h3{
+margin-top:12px;
+font-family:Georgia,serif;
+font-size:27px;
+font-weight:500;
+}
+.stage p{
+margin-top:10px;
+font-size:15px;
+color:#68746f;
+}
+.stage-process{
+margin-top:20px;
+padding-top:18px;
+border-top:1px solid #e5e9e5;
+font-size:14px;
+color:#315548;
+font-weight:600;
+line-height:1.8;
+}
+.stage-process span{
+display:block;
+color:#68746f;
+font-weight:400;
+}
 /* IMAGES */
-
 .image-box{
 margin-top:35px;
 border-radius:22px;
@@ -186,64 +182,49 @@ background:white;
 border:1px solid #dfe5df;
 overflow:hidden;
 }
-
 .image-box img{
 width:100%;
 height:auto;
 display:block;
 }
-
-
 /* TWO COLUMN */
-
 .two{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:18px;
 }
-
-
 /* RESULTS */
-
 .results{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:15px;
 margin-top:35px;
 }
-
 .result{
 padding:28px;
 background:white;
 border-radius:20px;
 border:1px solid #dfe5df;
 }
-
 .number{
 font-family:Georgia,serif;
 font-size:42px;
 color:#315548;
 }
-
 .result p{
 margin-top:7px;
 font-size:14px;
 color:#68746f;
 }
-
 .caption{
 margin-top:9px;
 font-size:13px;
 color:#68746f;
 }
-
-
 /* AOGS */
-
 .aogs-intro{
 max-width:800px;
 }
-
 .aogs-highlight{
 margin-top:30px;
 padding:30px;
@@ -251,82 +232,68 @@ border-left:4px solid #315548;
 background:#eef2ed;
 border-radius:0 18px 18px 0;
 }
-
 .aogs-highlight strong{
 font-family:Georgia,serif;
 font-size:24px;
 font-weight:500;
 }
-
 .aogs-highlight p{
 margin-top:10px;
 font-size:16px;
 color:#596862;
 }
-
 .aogs-photos{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:18px;
 margin-top:35px;
 }
-
 .aogs-photo{
 border-radius:22px;
 background:white;
 border:1px solid #dfe5df;
 overflow:hidden;
 }
-
 .aogs-photo img{
 width:100%;
 height:auto;
 display:block;
 }
-
 .aogs-caption{
 margin-top:9px;
 font-size:13px;
 color:#68746f;
 }
-
-
 /* RESEARCH MATERIALS */
-
 .materials{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:18px;
 margin-top:35px;
 }
-
 .material{
 padding:32px;
 background:white;
 border:1px solid #dfe5df;
 border-radius:22px;
 }
-
 .material-label{
 font-size:11px;
 font-weight:800;
 letter-spacing:.14em;
 color:#356b5a;
 }
-
 .material h3{
 margin-top:10px;
 font-family:Georgia,serif;
 font-size:27px;
 font-weight:500;
 }
-
 .material p{
 margin-top:8px;
 font-size:14px;
 color:#68746f;
 }
-
 .material-button{
 display:inline-block;
 margin-top:22px;
@@ -338,15 +305,11 @@ font-size:13px;
 font-weight:700;
 transition:.2s ease;
 }
-
 .material-button:hover{
 transform:translateY(-2px);
 opacity:.9;
 }
-
-
 /* REFLECTION */
-
 .reflection{
 padding:35px;
 border-radius:22px;
@@ -356,88 +319,53 @@ font-family:Georgia,serif;
 font-size:25px;
 line-height:1.5;
 }
-
-
 /* FOOTER */
-
 footer{
 padding:60px 0 80px;
 color:#68746f;
 font-size:14px;
 }
-
-
 /* MOBILE */
-
 @media(max-width:800px){
-
 .fire-events{
 grid-template-columns:1fr;
 }
-
 .results{
 grid-template-columns:1fr;
 }
-
 .two{
 grid-template-columns:1fr;
 }
-
 .aogs-photos{
 grid-template-columns:1fr;
 }
-
 .materials{
 grid-template-columns:1fr;
 }
-
+.research-journey{
+grid-template-columns:1fr;
 }
-
+}
 </style>
-
 </head>
-
-
 <body>
-
-
 <!-- NAVIGATION -->
-
 <nav>
-
 <div class="container nav-inner">
 
-<a class="logo"
-href="index.html">
 YIYI DENG
-</a>
-
-<a class="back"
-href="index.html">
 ← Back to portfolio
-</a>
-
 </div>
-
 </nav>
-
-
-
 <main class="container">
-
-
 <!-- HERO -->
-
 <div class="hero">
-
 <div class="eyebrow">
 RESEARCH · 02 · WILDFIRE & BIODIVERSITY
 </div>
-
 <h1>
 Wildfire impacts on biodiversity in California
 </h1>
-
 <p class="lead">
 
 Using high-resolution satellite imagery and
@@ -445,23 +373,15 @@ spatial analysis to investigate how wildfire
 severity relates to biodiversity change.
 
 </p>
-
 <div class="conference-tag">
 RESEARCH PRESENTED AT AOGS
 </div>
-
 </div>
-
-
-
 <!-- THE QUESTION -->
-
 <section class="section">
-
 <h2 class="section-title">
 The question
 </h2>
-
 <p class="text">
 
 Wildfires can rapidly transform ecosystems,
@@ -472,140 +392,168 @@ in biodiversity across three California wildfire
 events.
 
 </p>
-
 </section>
-
-
-
 <!-- STUDY AREA -->
-
 <section class="section">
-
 <h2 class="section-title">
 Study area
 </h2>
-
 <p class="text">
 
 The study focused on three major wildfire events
 in California:
 
 </p>
-
-
 <div class="fire-events">
-
 <div class="event">
-
 <strong>
 Palisades
 </strong>
-
 <span>
 California wildfire
 </span>
-
 </div>
-
-
 <div class="event">
-
 <strong>
 Eaton
 </strong>
-
 <span>
 California wildfire
 </span>
-
 </div>
-
-
 <div class="event">
-
 <strong>
 Hughes
 </strong>
-
 <span>
 California wildfire
 </span>
-
 </div>
-
 </div>
-
-
 <div class="image-box">
-
-<img
-src="images/wildfire-study-area.png"
-alt="Study area map showing the Palisades, Eaton, and Hughes wildfires in California">
-
 </div>
-
 <div class="caption">
 
 Study area showing the three California wildfire events.
 
 </div>
-
 </section>
-
-
-
-<!-- REMOTE SENSING -->
-
+<!-- RESEARCH JOURNEY -->
 <section class="section">
-
 <h2 class="section-title">
-Remote sensing
+From fire to biodiversity
 </h2>
-
 <p class="text">
 
-Sentinel-2 imagery was used to delineate burned
-areas at 10-meter spatial resolution. This allowed
-the analysis to capture spatial details that may
-be missed by coarser-resolution datasets.
+Rather than treating the analysis as a single
+technical workflow, I approached the research
+as four connected questions: Where did the fire
+occur? How severe was it? How did biodiversity
+respond? And why did those responses vary across
+space?
 
 </p>
+<div class="research-journey">
+<div class="stage">
+<div class="stage-number">
+01 · MAP THE FIRE
+</div>
+<h3>
+Where did the fire occur?
+</h3>
+<p>
 
+I used Sentinel-2 satellite imagery and a U-Net
+model to delineate the burned areas of the three
+wildfire events at 10-meter spatial resolution.
 
-<div class="flow">
+</p>
+<div class="stage-process">
 
 Sentinel-2 imagery
 
-↓
-
-U-Net burn-area delineation
-
-↓
-
-dNBR burn severity
-
-↓
-
-Biodiversity response
-
-↓
-
-Spatial analysis with MGWR
-
+<span>
+→ U-Net burn-area delineation
+</span>
 </div>
+</div>
+<div class="stage">
+<div class="stage-number">
+02 · MEASURE SEVERITY
+</div>
+<h3>
+How severe was the disturbance?
+</h3>
+<p>
 
+Differenced Normalized Burn Ratio (dNBR) was used
+to quantify the intensity of ecological disturbance
+across the burned landscape.
+
+</p>
+<div class="stage-process">
+
+Burned area
+
+<span>
+→ dNBR burn severity
+</span>
+</div>
+</div>
+<div class="stage">
+<div class="stage-number">
+03 · TRACK BIODIVERSITY
+</div>
+<h3>
+How did species respond?
+</h3>
+<p>
+
+I examined changes in species richness across
+amphibians, reptiles, and mammals to understand
+how different groups responded to wildfire severity.
+
+</p>
+<div class="stage-process">
+
+Burn severity
+
+<span>
+→ Species richness change
+</span>
+</div>
+</div>
+<div class="stage">
+<div class="stage-number">
+04 · EXPLAIN SPATIAL PATTERNS
+</div>
+<h3>
+Why did responses vary?
+</h3>
+<p>
+
+Multiscale Geographically Weighted Regression
+(MGWR) was used to investigate how the relationship
+between wildfire severity and biodiversity varied
+across space.
+
+</p>
+<div class="stage-process">
+
+Local ecological response
+
+<span>
+→ Spatially varying relationships
+</span>
+</div>
+</div>
+</div>
 </section>
-
-
-
 <!-- BURN SEVERITY -->
-
 <section class="section">
-
 <h2 class="section-title">
 Burn severity
 </h2>
-
 <p class="text">
 
 Differenced Normalized Burn Ratio (dNBR) was used
@@ -613,64 +561,32 @@ to characterize the severity of ecological disturbance
 following wildfire.
 
 </p>
-
-
 <div class="two">
-
-
 <div>
-
 <div class="image-box">
-
-<img
-src="images/wildfire-unet.png"
-alt="U-Net wildfire burn area delineation">
-
 </div>
-
 <div class="caption">
 
 U-Net delineation of wildfire-affected areas.
 
 </div>
-
 </div>
-
-
-
 <div>
-
 <div class="image-box">
-
-<img
-src="images/wildfire-dnbr.png"
-alt="dNBR burn severity map">
-
 </div>
-
 <div class="caption">
 
 Spatial distribution of burn severity based on dNBR.
 
 </div>
-
 </div>
-
-
 </div>
-
 </section>
-
-
-
 <!-- BIODIVERSITY RESPONSE -->
-
 <section class="section">
-
 <h2 class="section-title">
 Biodiversity response
 </h2>
-
 <p class="text">
 
 The analysis examined changes in species richness
@@ -678,82 +594,46 @@ across amphibians, reptiles, and mammals in relation
 to wildfire severity.
 
 </p>
-
-
 <div class="results">
-
-
 <div class="result">
-
 <div class="number">
 56.1%
 </div>
-
 <p>
 Study area experiencing declining species richness
 </p>
-
 </div>
-
-
-
 <div class="result">
-
 <div class="number">
 71.0%
 </div>
-
 <p>
 Amphibian area experiencing decline
 </p>
-
 </div>
-
-
-
 <div class="result">
-
 <div class="number">
 65.2%
 </div>
-
 <p>
 Reptile area experiencing decline
 </p>
-
 </div>
-
-
 </div>
-
-
 <div class="image-box">
-
-<img
-src="images/wildfire-results.png"
-alt="Biodiversity response and tipping point analysis">
-
 </div>
-
 <div class="caption">
 
 Changes in biodiversity response and ecological
 tipping points following wildfire.
 
 </div>
-
 </section>
-
-
-
 <!-- SPATIAL HETEROGENEITY -->
-
 <section class="section">
-
 <h2 class="section-title">
 Spatial heterogeneity
 </h2>
-
 <p class="text">
 
 Because ecological responses can vary across space,
@@ -762,54 +642,34 @@ was used to investigate spatially varying relationships
 between wildfire severity and biodiversity response.
 
 </p>
-
-
 <div class="image-box">
-
-<img
-src="images/wildfire-mgwr.png"
-alt="MGWR spatial analysis results">
-
 </div>
-
 <div class="caption">
 
 Spatially varying relationships between wildfire
 severity and biodiversity response.
 
 </div>
-
 </section>
-
-
-
 <!-- AOGS CONFERENCE -->
-
 <section class="section">
-
 <div class="aogs-intro">
-
 <h2 class="section-title">
 Presented at AOGS
 </h2>
-
 <p class="text">
 
 This research was developed for presentation at the
-<strong>Asia Oceania Geosciences Society (AOGS)</strong>
+Asia Oceania Geosciences Society (AOGS)
 conference. I presented the study, including its
 remote-sensing methodology, spatial analysis, and
 findings on wildfire impacts on biodiversity.
 
 </p>
-
-
 <div class="aogs-highlight">
-
 <strong>
 From research to scientific communication
 </strong>
-
 <p>
 
 Preparing this study for AOGS gave me the opportunity
@@ -818,125 +678,68 @@ project into a scientific presentation and communicate
 its findings to an academic audience.
 
 </p>
-
 </div>
-
 </div>
-
-
-
 <!-- AOGS PHOTOS -->
-
 <div class="aogs-photos">
-
-
 <div>
-
 <div class="aogs-photo">
-
-<img
-src="images/aogs-wildfire-1.jpg"
-alt="Yiyi Deng presenting wildfire and biodiversity research at AOGS">
-
 </div>
-
 <div class="aogs-caption">
 
 Presenting my wildfire and biodiversity research at AOGS.
 
 </div>
-
 </div>
-
-
-
 <div>
-
 <div class="aogs-photo">
-
-<img
-src="images/aogs-wildfire-2.jpg"
-alt="Yiyi Deng at the AOGS conference">
-
 </div>
-
 <div class="aogs-caption">
 
 Sharing the research with an academic audience.
 
 </div>
-
 </div>
-
-
 </div>
-
 </section>
-
-
-
 <!-- RESEARCH MATERIALS -->
-
 <section class="section">
-
 <h2 class="section-title">
 Research materials
 </h2>
-
 <p class="text">
 
 The full presentation and manuscript are available
 below for a closer look at the research.
 
 </p>
-
-
 <div class="materials">
-
-
 <!-- PDF -->
-
 <div class="material">
-
 <div class="material-label">
 CONFERENCE PRESENTATION
 </div>
-
 <h3>
 AOGS Presentation
 </h3>
-
 <p>
 
 Slides presented at the AOGS conference.
 
 </p>
 
-<a
-class="material-button"
-href="汇报ppt.pdf"
-target="_blank">
-
 View Presentation →
 
 </a>
-
 </div>
-
-
-
 <!-- MANUSCRIPT -->
-
 <div class="material">
-
 <div class="material-label">
 FULL MANUSCRIPT
 </div>
-
 <h3>
 Research Manuscript
 </h3>
-
 <p>
 
 Full manuscript documenting the methodology,
@@ -944,28 +747,14 @@ analysis, and findings of the study.
 
 </p>
 
-<a
-class="material-button"
-href="manuscript.docx"
-download>
-
 View / Download Manuscript →
 
 </a>
-
 </div>
-
-
 </div>
-
 </section>
-
-
-
 <!-- REFLECTION -->
-
 <section class="section">
-
 <div class="reflection">
 
 This project showed me that a wildfire is not
@@ -976,23 +765,13 @@ the fire occurs, how severe it is, and how
 different species respond.
 
 </div>
-
 </section>
-
-
 </main>
-
-
-
 <!-- FOOTER -->
-
 <footer class="container">
 
 © 2026 Yiyi Deng · California Wildfire & Biodiversity
 
 </footer>
-
-
 </body>
-
 </html>

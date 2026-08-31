@@ -113,7 +113,9 @@ section{
 }
 
 
-/* PHOTO GRID */
+/* =====================================================
+   PHOTO GRID
+===================================================== */
 
 .photo-grid{
     display:grid;
@@ -148,7 +150,9 @@ section{
 }
 
 
-/* SMALL BADMINTON */
+/* =====================================================
+   SMALL BADMINTON
+===================================================== */
 
 .small-section{
     background:#eef2ed;
@@ -172,7 +176,9 @@ section{
 }
 
 
-/* EXPEDITION */
+/* =====================================================
+   EXPEDITION INFO BOX
+===================================================== */
 
 .expedition-box{
     margin-top:40px;
@@ -193,7 +199,53 @@ section{
 }
 
 
-/* REFLECTION */
+/* =====================================================
+   EXPEDITION PHOTO GALLERY
+===================================================== */
+
+.expedition-gallery{
+    display:grid;
+    grid-template-columns:1.35fr 1fr 1fr;
+    grid-template-rows:300px 300px;
+    gap:16px;
+    margin-top:45px;
+}
+
+.expedition-photo{
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.expedition-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .45s ease;
+}
+
+.expedition-photo:hover img{
+    transform:scale(1.035);
+}
+
+
+/* Main hiking photo */
+
+.expedition-photo.main{
+    grid-column:span 2;
+}
+
+
+/* Personal photo */
+
+.expedition-photo.portrait{
+    grid-column:span 2;
+}
+
+
+/* =====================================================
+   REFLECTION
+===================================================== */
 
 .reflection{
     padding:40px;
@@ -206,7 +258,9 @@ section{
 }
 
 
-/* FOOTER */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
     padding:60px 0 80px;
@@ -214,6 +268,10 @@ footer{
     font-size:14px;
 }
 
+
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media(max-width:800px){
 
@@ -229,7 +287,25 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .expedition-gallery{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:260px 260px 260px;
+    }
+
+    .expedition-photo.main{
+        grid-column:span 2;
+    }
+
+    .expedition-photo.portrait{
+        grid-column:span 2;
+    }
+
 }
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:500px){
 
@@ -255,6 +331,25 @@ footer{
         padding:30px;
     }
 
+    .expedition-gallery{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .expedition-photo{
+        height:280px;
+    }
+
+    .expedition-photo.main,
+    .expedition-photo.portrait{
+        height:360px;
+    }
+
+    .reflection{
+        padding:30px;
+        font-size:22px;
+    }
+
 }
 
 </style>
@@ -264,6 +359,10 @@ footer{
 
 <body>
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <nav>
 
@@ -285,7 +384,9 @@ YIYI DENG
 <main class="container">
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <div class="hero">
 
@@ -309,7 +410,9 @@ and becoming more independent.
 </div>
 
 
-<!-- INTRO -->
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
 <section>
 
@@ -332,7 +435,9 @@ multi-day expedition.
 </section>
 
 
-<!-- FRENCH -->
+<!-- =====================================================
+     FRENCH
+===================================================== -->
 
 <section>
 
@@ -392,7 +497,9 @@ alt="French learning journey">
 </section>
 
 
-<!-- BADMINTON SMALL -->
+<!-- =====================================================
+     BADMINTON
+===================================================== -->
 
 <section>
 
@@ -432,7 +539,9 @@ alt="Badminton">
 </section>
 
 
-<!-- EXPEDITION -->
+<!-- =====================================================
+     EXPEDITION
+===================================================== -->
 
 <section>
 
@@ -457,6 +566,8 @@ changing conditions along the trail.
 </p>
 
 
+<!-- EXPEDITION INFO -->
+
 <div class="expedition-box">
 
 <h3>
@@ -464,68 +575,68 @@ Huizhou → Hong Kong
 </h3>
 
 <p>
-
 Six days · Hiking · Teamwork · Navigation ·
 Perseverance
-
 </p>
 
 </div>
 
 
-<div class="photo-grid">
+<!-- =====================================================
+     HIKING PHOTOS
+===================================================== -->
 
-<div class="photo wide">
-<img src="images/duke-expedition-01.jpg"
-alt="DofE expedition">
+<div class="expedition-gallery">
+
+
+<!-- Main landscape + team photo -->
+
+<div class="expedition-photo main">
+
+<img src="images/hiking-main.jpeg"
+alt="Duke of Edinburgh hiking expedition with my team">
+
 </div>
 
-<div class="photo">
-<img src="images/duke-expedition-02.jpg"
-alt="Hiking expedition">
+
+<!-- Summit team photo -->
+
+<div class="expedition-photo">
+
+<img src="images/hiking-team.jpeg"
+alt="Hiking team at a mountain viewpoint">
+
 </div>
 
-<div class="photo">
-<img src="images/duke-expedition-03.jpg"
-alt="Hiking">
+
+<!-- Forest hiking photo -->
+
+<div class="expedition-photo">
+
+<img src="images/hiking-trail.jpeg"
+alt="Hiking through a forest trail">
+
 </div>
 
-<div class="photo">
-<img src="images/duke-expedition-04.jpg"
-alt="Expedition">
+
+<!-- Personal outdoor photo -->
+
+<div class="expedition-photo portrait">
+
+<img src="images/hiking-portrait.jpeg"
+alt="Outdoor expedition by the sea">
+
 </div>
 
-<div class="photo wide">
-<img src="images/duke-expedition-05.jpg"
-alt="Hiking trail">
-</div>
-
-<div class="photo">
-<img src="images/duke-expedition-06.jpg"
-alt="Expedition team">
-</div>
-
-<div class="photo">
-<img src="images/duke-expedition-07.jpg"
-alt="Hiking">
-</div>
-
-<div class="photo">
-<img src="images/duke-expedition-08.jpg"
-alt="DofE expedition">
-</div>
-
-<div class="photo wide">
-<img src="images/duke-expedition-09.jpg"
-alt="Expedition landscape">
-</div>
 
 </div>
 
 </section>
 
 
-<!-- REFLECTION -->
+<!-- =====================================================
+     REFLECTION
+===================================================== -->
 
 <section>
 
@@ -546,6 +657,10 @@ when the journey becomes difficult.
 
 </main>
 
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="container">
 

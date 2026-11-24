@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Badminton | Yiyi Deng</title>
+<meta name="description" content="Yiyi Deng — badminton, daily training, school team memories, friendship and personal growth.">
 <style>
 /* GLOBAL */
 *{
@@ -100,7 +101,7 @@ section{
     color:#596862;
     font-size:17px;
 }
-/* PHOTO GALLERY */
+/* PHOTO GRID */
 .photo-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -122,22 +123,13 @@ section{
 .photo:hover img{
     transform:scale(1.04);
 }
-.photo.wide{
-    grid-column:span 2;
-}
-.photo.wide img{
-    height:350px;
-}
 .caption{
     padding:12px 15px;
     font-size:13px;
     color:#68746f;
     background:#f0f1eb;
 }
-/* TEAM SECTION */
-.team-intro{
-    max-width:780px;
-}
+/* TEAM GALLERY */
 .team-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -150,10 +142,10 @@ section{
     background:#dfe8df;
 }
 .team-photo img{
-    display:block;
     width:100%;
-    height:330px;
+    height:350px;
     object-fit:cover;
+    display:block;
     transition:transform .45s ease;
 }
 .team-photo:hover img{
@@ -165,7 +157,7 @@ section{
     color:#68746f;
     background:#f0f1eb;
 }
-/* THREE BENEFITS */
+/* BENEFITS */
 .memory-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -223,21 +215,19 @@ footer{
     color:#68746f;
     font-size:14px;
 }
-/* MOBILE */
+/* TABLET */
 @media(max-width:800px){
     .photo-grid{
         grid-template-columns:repeat(2,1fr);
     }
-    .photo.wide{
-        grid-column:span 2;
-    }
     .team-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
     }
     .memory-grid{
         grid-template-columns:1fr;
     }
 }
+/* MOBILE */
 @media(max-width:500px){
     .hero{
         padding:75px 0;
@@ -248,15 +238,14 @@ footer{
     .photo-grid{
         grid-template-columns:1fr;
     }
-    .photo.wide{
-        grid-column:span 1;
+    .team-grid{
+        grid-template-columns:1fr;
     }
-    .photo img,
-    .photo.wide img{
+    .photo img{
         height:280px;
     }
     .team-photo img{
-        height:270px;
+        height:280px;
     }
     .reflection{
         padding:30px;
@@ -292,7 +281,7 @@ and creates memories I will always carry with me.
 
 </p>
 </div>
-<!-- INTRO -->
+<!-- INTRODUCTION -->
 <section>
 <div class="eyebrow">
 01 · WHY I PLAY
@@ -302,18 +291,20 @@ More than a sport
 </h2>
 <p class="text">
 
-Badminton has become a meaningful part of my life,
-both through school activities and beyond.
+Badminton has become a meaningful part of my life.
 
-What began as an opportunity to stay active gradually
-became something I genuinely looked forward to.
-Through regular training and playing with others,
-I have discovered the joy of challenging myself,
-improving little by little, and sharing the court
-with people who enjoy the game just as much as I do.
+What I enjoy most is not simply the game itself,
+but everything that comes with it: staying active,
+challenging myself, meeting people, and sharing
+the excitement of playing together.
 
-More than anything, badminton has given me a healthy
-routine and a community of friends.
+Through regular practice and time on court,
+badminton has gradually become a rewarding part
+of my everyday routine.
+
+It reminds me that some of the best experiences
+come from doing something you genuinely enjoy
+with others.
 
 </p>
 </section>
@@ -363,7 +354,6 @@ Learning and improving through practice
 <h2 class="section-title">
 Better together
 </h2>
-<div class="team-intro">
 <p class="text">
 
 Some of my most treasured badminton memories
@@ -373,13 +363,12 @@ From training sessions to shared moments on and
 off the court, I have come to appreciate the
 friendships built through a common passion.
 
-We encourage each other, celebrate small
+We encourage one another, celebrate small
 improvements, and work towards becoming better
 together. These experiences have made badminton
 much more than an individual sport for me.
 
 </p>
-</div>
 <div class="team-grid">
 <div class="team-photo">
 <div class="team-caption">
@@ -403,45 +392,10 @@ Striving and growing together
 </div>
 </div>
 </section>
-<!-- GAMES -->
-<section>
-<div class="eyebrow">
-04 · GAMES & MEMORIES
-</div>
-<h2 class="section-title">
-Every rally counts
-</h2>
-<p class="text">
-
-Whether playing friendly games or challenging
-myself in more competitive matches, every
-time on court brings something memorable.
-
-There are victories worth celebrating, mistakes
-to learn from, and countless moments of laughter
-in between. It is this combination of challenge
-and enjoyment that keeps me coming back.
-
-</p>
-<div class="photo-grid">
-<div class="photo wide">
-</div>
-<div class="photo">
-</div>
-<div class="photo">
-</div>
-<div class="photo">
-</div>
-<div class="photo wide">
-</div>
-<div class="photo">
-</div>
-</div>
-</section>
 <!-- WHAT BADMINTON GAVE ME -->
 <section>
 <div class="eyebrow">
-05 · WHAT BADMINTON GAVE ME
+04 · WHAT BADMINTON GAVE ME
 </div>
 <h2 class="section-title">
 More than I expected
@@ -464,7 +418,7 @@ A healthier life
 <p>
 
 Regular movement, an active routine, and the
-energy that comes from staying physically active.
+energy that comes from enjoying physical activity.
 
 </p>
 </div>
@@ -478,7 +432,7 @@ Lasting friendships
 <p>
 
 Meeting people, supporting one another, and
-building friendships through a shared passion.
+building genuine friendships through a shared passion.
 
 </p>
 </div>
@@ -492,7 +446,7 @@ Shared memories
 <p>
 
 The laughter, challenges, close games, and
-the unforgettable feeling of striving together
+unforgettable moments of striving together
 as a team.
 
 </p>
@@ -514,16 +468,16 @@ but the people I played alongside.
 <p>
 
 Badminton has given me more than a healthy body.
-It has brought me friendships, meaningful memories,
-and the experience of working hard towards something
-together.
+It has brought me lasting friendships, meaningful
+memories, and the experience of working hard
+towards something together.
 
 The best moments are often the ones we share:
 encouraging each other, pushing through challenges,
 celebrating progress, and enjoying every game.
 
-These are the memories that make me want to keep
-coming back to the court.
+These are the memories that make me want to
+keep coming back to the court.
 
 </p>
 </div>
